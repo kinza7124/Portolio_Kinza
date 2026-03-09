@@ -1,74 +1,94 @@
 import { portfolioData } from "@/data/portfolioData";
-import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+const contactLinks = [
+  { icon: Github, label: "GitHub", handle: "@kinza7124", key: "github" as const },
+  { icon: Linkedin, label: "LinkedIn", handle: "Kinza Afzal", key: "linkedin" as const },
+  { icon: Mail, label: "Email", handle: "", key: "email" as const },
+];
 
 export const ContactPanel = () => {
-  const { contact, about } = portfolioData;
+  const { contact } = portfolioData;
   
   return (
-    <div className="space-y-6 animate-panel-content">
-      <div className="flex items-center gap-2 animate-stagger-1">
-        <span className="text-4xl">♙</span>
-        <h2 className="text-3xl font-serif gold-text">Contact</h2>
-      </div>
+    <div className="space-y-6">
+      <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }}>
+        <div className="flex items-center gap-3">
+          <span className="text-4xl">♙</span>
+          <h2 className="text-3xl font-serif gold-text">Contact</h2>
+        </div>
+        <div className="divider-gold mt-3" />
+      </motion.div>
       
-      <p className="text-muted-foreground animate-stagger-2">
+      <motion.p 
+        className="text-sm text-muted-foreground border-l-2 border-primary/20 pl-4"
+        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}
+      >
         Let's connect! Feel free to reach out through any of the channels below.
-      </p>
+      </motion.p>
       
-      <div className="space-y-3 animate-stagger-3">
-        <a
-          href={contact.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-4 p-4 bg-secondary/50 rounded-lg border border-border/50 hover:border-primary/50 hover:bg-secondary transition-all duration-300 group"
-        >
-          <Github className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
-          <div className="flex-1">
-            <p className="font-medium text-foreground group-hover:text-primary transition-colors">GitHub</p>
-            <p className="text-sm text-muted-foreground">@kinza7124</p>
-          </div>
-          <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
-        </a>
+      <div className="space-y-2.5">
+        {contactLinks.map((item, i) => {
+          const href = item.key === "email" ? `mailto:${contact.email}` : contact[item.key];
+          const handle = item.key === "email" ? contact.email : item.handle;
+          
+          return (
+            <motion.a
+              key={item.key}
+              href={href}
+              target={item.key !== "email" ? "_blank" : undefined}
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 p-4 rounded-xl bg-secondary/20 border border-border/15 hover:border-primary/25 transition-all duration-300 group card-hover"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25 + i * 0.08 }}
+              whileHover={{ x: 4 }}
+            >
+              <div className="p-2 rounded-lg bg-primary/10 border border-primary/15 group-hover:bg-primary/20 transition-colors">
+                <item.icon className="w-5 h-5 text-primary/70 group-hover:text-primary transition-colors" />
+              </div>
+              <div className="flex-1">
+                <p className="font-serif font-semibold text-sm text-foreground group-hover:text-primary transition-colors">{item.label}</p>
+                <p className="text-xs text-muted-foreground">{handle}</p>
+              </div>
+              <ExternalLink className="w-3.5 h-3.5 text-muted-foreground/40 group-hover:text-primary/60 transition-colors" />
+            </motion.a>
+          );
+        })}
         
-        <a
-          href={contact.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-4 p-4 bg-secondary/50 rounded-lg border border-border/50 hover:border-primary/50 hover:bg-secondary transition-all duration-300 group"
+        {/* Phone */}
+        <motion.div
+          className="flex items-center gap-4 p-4 rounded-xl bg-secondary/20 border border-border/15"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
         >
-          <Linkedin className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
-          <div className="flex-1">
-            <p className="font-medium text-foreground group-hover:text-primary transition-colors">LinkedIn</p>
-            <p className="text-sm text-muted-foreground">Kinza Afzal</p>
+          <div className="p-2 rounded-lg bg-primary/10 border border-primary/15">
+            <Phone className="w-5 h-5 text-primary/70" />
           </div>
-          <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
-        </a>
-        
-        <a
-          href={`mailto:${contact.email}`}
-          className="flex items-center gap-4 p-4 bg-secondary/50 rounded-lg border border-border/50 hover:border-primary/50 hover:bg-secondary transition-all duration-300 group"
-        >
-          <Mail className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
           <div className="flex-1">
-            <p className="font-medium text-foreground group-hover:text-primary transition-colors">Email</p>
-            <p className="text-sm text-muted-foreground">{contact.email}</p>
+            <p className="font-serif font-semibold text-sm text-foreground">Phone</p>
+            <p className="text-xs text-muted-foreground">{contact.phone}</p>
           </div>
-          <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
-        </a>
+        </motion.div>
       </div>
       
-      <div className="pt-4">
+      <motion.div 
+        className="pt-2"
+        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}
+      >
         <Button 
           asChild
-          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+          className="w-full bg-primary/90 hover:bg-primary text-primary-foreground font-serif font-semibold tracking-wide rounded-xl h-11"
         >
           <a href={`mailto:${contact.email}`}>
             <Mail className="w-4 h-4 mr-2" />
             Send me an email
           </a>
         </Button>
-      </div>
+      </motion.div>
     </div>
   );
 };
