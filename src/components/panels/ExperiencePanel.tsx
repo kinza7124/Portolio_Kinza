@@ -1,5 +1,6 @@
 import { portfolioData } from "@/data/portfolioData";
 import { Badge } from "@/components/ui/badge";
+import { ExternalLink } from "lucide-react";
 
 export const ExperiencePanel = () => {
   const { experience } = portfolioData;
