@@ -145,7 +145,7 @@ const Index = () => {
               {portfolioData.about.title}
             </p>
             <p className="text-sm text-muted-foreground max-w-md mx-auto leading-relaxed">
-              Click on any chess piece to explore different facets of my journey
+              Every great move starts with strategy — select a piece to explore my world
             </p>
           </motion.div>
 

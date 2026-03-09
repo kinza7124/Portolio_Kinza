@@ -10,11 +10,11 @@ import netlabproImg from "@/assets/projects/netlabpro.png";
 export const portfolioData = {
   about: {
     name: "Kinza Afzal",
-    title: "AI/ML Enthusiast",
-    location: "Karachi",
+    title: "AI/ML Engineer & Full-Stack Developer",
+    location: "Karachi, Pakistan",
     phone: "+92 3242217127",
     email: "kinzaafzal07122004@gmail.com",
-    bio: "AI/ML enthusiast with hands-on experience in Machine Learning, Deep Learning, and AI systems. Passionate about contributing to innovative projects through data-driven modeling and problem-solving.",
+    bio: "Building intelligent systems at the intersection of Machine Learning and Software Engineering. From multi-agent AI orchestration to full-stack platforms, I turn complex problems into elegant, data-driven solutions — with a 3.93 GPA and 3× Gold Medal track record to back it up.",
   },
   
   education: [
@@ -23,21 +23,21 @@ export const portfolioData = {
       institution: "FAST NUCES",
       period: "2023-2027",
       gpa: "3.93/4.00",
-      description: "Currently pursuing BS in Computer Science with focus on AI/ML and software development."
+      description: "Pursuing BS Computer Science with a focus on AI/ML, maintaining a near-perfect GPA while leading multiple technical initiatives."
     },
     {
       degree: "A Levels Excellence",
       institution: "Highbrow School & College",
       period: "",
       gpa: "3A* 1A",
-      description: "Achieved 3A* 1A grades in A Levels examinations."
+      description: "Achieved exceptional 3A* 1A grades, demonstrating strong analytical foundations."
     },
     {
       degree: "O Levels Excellence",
       institution: "Happy Palace Grammar School",
       period: "",
       gpa: "8A*",
-      description: "Achieved 8A* grades in O Levels examinations."
+      description: "Earned a perfect 8A* record, setting the stage for academic excellence."
     }
   ],
   
@@ -46,83 +46,83 @@ export const portfolioData = {
       role: "App Testing Program Participant",
       company: "9D Technologies",
       period: "2026",
-      description: "Beta tester conducting comprehensive user experience testing and quality assurance for applications. Evaluated app functionality, UI/UX, performance, and overall user experience.",
-      tags: ["Beta testing", "User experience testing", "Quality assurance"],
+      description: "Conducted comprehensive UX testing and QA for production applications, identifying usability gaps and providing actionable feedback to improve app performance and user satisfaction.",
+      tags: ["Beta Testing", "UX Research", "Quality Assurance"],
       link: ""
     },
     {
-      role: "Teaching Assistant of Database System",
+      role: "Teaching Assistant — Database Systems",
       company: "FAST NUCES",
-      period: "Feb 2026 - May 2026",
-      description: "Currently mentoring 6th semester BSBA students in Database Systems. Conducting MySQL assignments and projects evaluation, providing guidance on database design, queries, and business application development.",
-      tags: ["Database Systems", "MySQL", "BSBA", "Project Evaluation"],
+      period: "Feb 2026 – May 2026",
+      description: "Mentoring 6th-semester BSBA students in Database Systems — guiding MySQL assignments, evaluating projects, and helping students bridge the gap between theory and real-world database design.",
+      tags: ["Database Systems", "MySQL", "Mentorship"],
       link: ""
     },
     {
-      role: "Teaching Assistant of Data Structures",
+      role: "Teaching Assistant — Data Structures",
       company: "FAST NUCES",
-      period: "Aug 2025 - Dec 2025",
-      description: "Mentored 40+ students on Data Structures & Algorithms, conducting code reviews and evaluating 20+ complex semester projects involving Trees, Graphs, and Heap implementations.",
-      tags: ["Mentorship", "Code reviews", "Project evaluation"],
+      period: "Aug 2025 – Dec 2025",
+      description: "Mentored 40+ students on DSA fundamentals, conducted thorough code reviews, and evaluated 20+ complex semester projects involving Trees, Graphs, and Heap implementations.",
+      tags: ["DSA", "Code Reviews", "Project Evaluation"],
       link: ""
     },
     {
       role: "Open Source Contributor",
       company: "GirlScript Summer of Code (GSSoC)",
       period: "2025",
-      description: "Contributed to ML/AI open-source projects by implementing features, fixing bugs, and optimizing Python code for high-impact repositories.",
-      tags: ["ML/AI Projects", "Feature implementation", "Code optimization"],
+      description: "Shipped features, squashed bugs, and optimized Python codebases across high-impact ML/AI open-source repositories during GSSoC 2025.",
+      tags: ["Open Source", "ML/AI", "Python"],
       link: "https://gssoc.girlscript.tech/"
     }
   ],
   
   leadership: [
     {
-      role: "Assistant Director - GR TechFest",
-      organization: "Developers' Day - ACM NUCES",
-      period: "Feb 2026 - Present",
-      description: "Leading guest relations and coordinating event operations for TechFest 2026, including speaker management and collaboration across organizing teams.",
+      role: "Assistant Director — GR TechFest",
+      organization: "Developers' Day — ACM NUCES",
+      period: "Feb 2026 – Present",
+      description: "Leading guest relations and coordinating event operations for TechFest 2026, including speaker management and cross-team collaboration.",
       tags: ["Leadership", "Event Management", "Coordination"],
       link: "https://www.linkedin.com/company/developersday/posts/?feedView=all"
     },
     {
       role: "Design Co-Head",
       organization: "ACM NUCES KHI",
-      period: "Aug 2025 - Present",
-      description: "Leading the visual identity and design strategy for the ACM student chapter, overseeing branding and creative direction.",
-      tags: ["Design", "Branding", "Leadership"],
+      period: "Aug 2025 – Present",
+      description: "Directing the visual identity and design strategy for the ACM student chapter — overseeing branding, creative direction, and design team output.",
+      tags: ["Design", "Branding", "Creative Direction"],
       link: "https://www.linkedin.com/company/acm-nuces-karachi/"
     },
     {
-      role: "Deputy",
+      role: "Deputy — Tech Operations",
       organization: "ACM NUCES KHI",
-      period: "Aug 2025 - Present",
-      description: "Working as part of ACM Tech Operations which handles all technical operations. Contributed to ACM NUCES CODER'S CUP 2025 and received Certificate of Appreciation for outstanding work.",
-      tags: ["Tech Operations", "Technical Leadership", "Event Coordination"],
+      period: "Aug 2025 – Present",
+      description: "Handling all technical operations for ACM. Key contributor to ACM NUCES Coder's Cup 2025, earning a Certificate of Appreciation for outstanding work.",
+      tags: ["Tech Ops", "Technical Leadership", "Events"],
       link: "https://tech-operations-showcase.raahim-irfan.workers.dev/"
     },
     {
-      role: "Member - TechOperations Team",
+      role: "Backend Developer — TechOps Team",
       organization: "ACM NUCES KHI",
-      period: "Aug 2025 - Present",
-      description: "Backend Development for Worklog Project. Developed backend for a performance identification platform that links GitHub profiles, allowing admins to rate and analyze commits, PRs, and contributions to identify star performers.",
-      tags: ["Backend Development", "PostgreSQL", "Performance Tracking"],
+      period: "Aug 2025 – Present",
+      description: "Built the backend for Worklog — a performance tracking platform that links GitHub profiles, enabling admins to rate commits, PRs, and contributions to identify star performers.",
+      tags: ["Backend", "PostgreSQL", "Performance Analytics"],
       link: "https://tech-operations-showcase.raahim-irfan.workers.dev/"
     },
     {
-      role: "Member - Automation Team",
-      organization: "Developers' Day - ACM NUCES",
-      period: "Feb 2025 - Jun 2025",
-      description: "Automation Showcase - DevDay'25. Developed email automation, custom templates, and the results portal frontend for the Developer's Day event.",
-      tags: ["Automation", "Frontend Development", "Email Systems"],
+      role: "Automation Engineer — DevDay'25",
+      organization: "Developers' Day — ACM NUCES",
+      period: "Feb 2025 – Jun 2025",
+      description: "Developed email automation, custom templates, and the results portal frontend for Developer's Day — streamlining event communications at scale.",
+      tags: ["Automation", "Frontend", "Email Systems"],
       link: "https://automation-showcase-devday25.vercel.app/"
     },
     {
       role: "Design Head",
       organization: "IEEE NUCES KHI",
-      period: "2024 - 2025",
-      description: "Directed social media visual content and logo designs for national level events. Led the design team in creating impactful visual identities for IEEE initiatives.",
-      tags: ["Design Leadership", "Visual Content", "Branding"],
+      period: "2024 – 2025",
+      description: "Directed social media visual content and logo designs for national-level events. Led the design team in crafting impactful visual identities for IEEE initiatives.",
+      tags: ["Design Leadership", "Visual Identity", "Branding"],
       link: ""
     }
   ],
@@ -140,57 +140,57 @@ export const portfolioData = {
   
   projects: [
     {
-      title: "Worklog App | ACM TechOps Team",
-      description: "Hierarchical worklog tracking platform with role-based access, 5-state progress flow, credits management, ratings, and file attachments. Built backend and PostgreSQL/Prisma architecture.",
-      tech: ["PostgreSQL", "Prisma", "Backend Development"],
+      title: "Worklog App | ACM TechOps",
+      description: "Hierarchical worklog platform with role-based access, a 5-state progress flow, credits management, and file attachments. Architected the backend with PostgreSQL & Prisma.",
+      tech: ["PostgreSQL", "Prisma", "Backend"],
       link: "https://drive.google.com/file/d/1l9_X4fIEuGKjuc3v6A3IZWFY8PsyEPOR/view",
       image: worklogImg
     },
     {
       title: "DSA Mentor Pro",
-      description: "High-fidelity, multimodal DSA tutoring platform powered by Google Gemini AI with agentic reasoning, chain-of-thought prompting, and structured JSON schema output.",
+      description: "Multimodal DSA tutoring platform powered by Google Gemini AI — featuring agentic reasoning, chain-of-thought prompting, and structured JSON schema output for interactive learning.",
       tech: ["Google Gemini AI", "React", "Agentic AI"],
       link: "https://github.com/kinza7124/DSA-Coding-Mentor",
       image: dsaMentorImg
     },
     {
       title: "Network Log Analyzer",
-      description: "ML model utilizing NLP techniques to monitor network logs and detect anomalies with automated email alerts via ChatOps.",
-      tech: ["Machine Learning", "NLP", "Python", "Streamlit"],
+      description: "ML-powered network monitoring system using NLP to detect anomalies in real-time, with automated email alerts via ChatOps for instant incident response.",
+      tech: ["Machine Learning", "NLP", "Streamlit"],
       link: "https://network-log-analyzer-7aue37agzfrjiri7tv4hkd.streamlit.app/",
       image: networkLogImg
     },
     {
       title: "Bug Type Predictor",
-      description: "ML & NLP preprocessing pipeline to predict bug types from text data using advanced classification and ensemble learning techniques.",
+      description: "End-to-end NLP pipeline that predicts bug types from raw text data using advanced classification and ensemble learning techniques.",
       tech: ["Machine Learning", "NLP", "Classification"],
       link: "https://predicting-bug-type-ml-project.vercel.app/",
       image: bugPredictorImg
     },
     {
       title: "Algorithm Visualiser",
-      description: "Interactive platform visualizing sorting, searching, and graph algorithms in real-time for learning complex algorithmic concepts.",
+      description: "Interactive visualizer that brings sorting, searching, and graph algorithms to life — making complex algorithmic concepts intuitive and engaging.",
       tech: ["JavaScript", "Algorithms", "Visualization"],
       link: "https://algorithm-visualiser-eight.vercel.app/",
       image: algoVisualizerImg
     },
     {
       title: "Book Recommender System",
-      description: "ML-powered recommendation system using Popularity-Based and Collaborative Filtering techniques for personalized book suggestions.",
+      description: "Smart recommendation engine combining Popularity-Based and Collaborative Filtering to surface personalized book suggestions from large datasets.",
       tech: ["Machine Learning", "Python", "Recommender Systems"],
       link: "https://github.com/kinza7124/Book-Recommender-System",
       image: bookRecommenderImg
     },
     {
       title: "LMS Studio",
-      description: "Comprehensive Learning Management System with role-based access, course management, assignment submission, and Google Classroom-like features.",
-      tech: ["Next.js", "TypeScript", "PostgreSQL", "Express.js"],
+      description: "Full-featured LMS with role-based access, course management, assignment workflows, and Google Classroom–style collaboration tools.",
+      tech: ["Next.js", "TypeScript", "PostgreSQL"],
       link: "https://lnkd.in/d3d_diT8",
       image: lmsStudioImg
     },
     {
       title: "NetLabPro",
-      description: "Interactive learning and gamified platform for Computer Network Labs with hands-on networking concept modules.",
+      description: "Gamified learning platform for Computer Network labs — turning hands-on networking concepts into interactive, bite-sized modules.",
       tech: ["React", "Gamification", "Education"],
       link: "https://net-lab-pro.vercel.app/",
       image: netlabproImg
@@ -202,40 +202,40 @@ export const portfolioData = {
       title: "Rector's List of Honours",
       organization: "FAST NUCES",
       period: "Fall 2024, Spring 2025",
-      description: "3x Gold Medalist for excellence in academic performance and integrity."
+      description: "3× Gold Medalist — recognized for sustained academic brilliance and integrity."
     },
     {
       title: "Dean's List of Honours",
       organization: "FAST NUCES",
       period: "Fall 2023, Spring 2024",
-      description: "2x recipient for outstanding academic achievement."
+      description: "2× honoree for outstanding academic achievement and consistency."
     },
     {
       title: "Software Engineer Certificate",
       organization: "HackerRank",
       period: "Jan 2026",
-      description: "Certified for software engineering skills.",
+      description: "Certified in core software engineering competencies including problem solving and data structures.",
       link: "https://www.hackerrank.com/certificates/iframe/9592306b93a7"
     },
     {
       title: "Introduction to AI Certificate",
       organization: "Simplilearn",
       period: "Sep 2025",
-      description: "Completed comprehensive introduction to AI concepts and applications.",
+      description: "Comprehensive certification covering AI fundamentals, neural networks, and real-world applications.",
       link: "https://www.linkedin.com/in/kinza-afzal7-/details/certifications"
     },
     {
       title: "Supervised Learning Certificate",
       organization: "DataCamp",
       period: "Sep 2025",
-      description: "Mastered supervised learning techniques using scikit-learn.",
+      description: "Mastered supervised learning techniques — regression, classification, and model evaluation — with scikit-learn.",
       link: "https://www.linkedin.com/in/kinza-afzal7-/details/certifications"
     },
     {
       title: "Deloitte Job Simulation",
       organization: "Deloitte",
       period: "Aug 2025",
-      description: "Completed technology job simulation program.",
+      description: "Completed a technology consulting simulation covering data analytics and strategic problem-solving.",
       link: "https://www.linkedin.com/in/kinza-afzal7-/details/certifications"
     }
   ],
