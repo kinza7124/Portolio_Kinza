@@ -48,18 +48,18 @@ export const ContentSheet = ({ section, onClose }: ContentSheetProps) => {
     <Sheet open={!!section} onOpenChange={(open) => !open && onClose()}>
       <SheetContent 
         side="right" 
-        className="w-full sm:w-[450px] md:w-[500px] bg-card/95 backdrop-blur-xl border-border/50 overflow-y-auto"
+        className="w-full sm:w-[450px] md:w-[500px] bg-card/95 backdrop-blur-xl border-border/50 overflow-y-auto animate-panel-enter"
       >
         <SheetHeader className="sr-only">
           <span>Portfolio Section</span>
         </SheetHeader>
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 p-2 rounded-full bg-secondary/50 hover:bg-secondary text-muted-foreground hover:text-foreground transition-colors z-50"
+          className="absolute right-4 top-4 p-2 rounded-full bg-secondary/50 hover:bg-secondary text-muted-foreground hover:text-foreground transition-colors z-50 animate-stagger-1"
         >
           <X className="w-4 h-4" />
         </button>
-        <div className="pt-8 pb-6">
+        <div className="pt-8 pb-6 animate-panel-content">
           {PanelComponent && <PanelComponent />}
         </div>
       </SheetContent>

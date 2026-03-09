@@ -6,17 +6,17 @@ export const ContactPanel = () => {
   const { contact, about } = portfolioData;
   
   return (
-    <div className="space-y-6 animate-fade-in">
-      <div className="flex items-center gap-2">
+    <div className="space-y-6 animate-panel-content">
+      <div className="flex items-center gap-2 animate-stagger-1">
         <span className="text-4xl">♙</span>
         <h2 className="text-3xl font-serif gold-text">Contact</h2>
       </div>
       
-      <p className="text-muted-foreground">
+      <p className="text-muted-foreground animate-stagger-2">
         Let's connect! Feel free to reach out through any of the channels below.
       </p>
       
-      <div className="space-y-3">
+      <div className="space-y-3 animate-stagger-3">
         <a
           href={contact.github}
           target="_blank"

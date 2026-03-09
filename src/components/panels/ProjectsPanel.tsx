@@ -6,13 +6,13 @@ export const ProjectsPanel = () => {
   const { projects } = portfolioData;
   
   return (
-    <div className="space-y-6 animate-fade-in">
-      <div className="flex items-center gap-2">
+    <div className="space-y-6 animate-panel-content">
+      <div className="flex items-center gap-2 animate-stagger-1">
         <span className="text-4xl">♕</span>
         <h2 className="text-3xl font-serif gold-text">Projects</h2>
       </div>
       
-      <div className="space-y-4 max-h-[60vh] overflow-y-auto pr-2 scrollbar-thin">
+      <div className="space-y-4 max-h-[60vh] overflow-y-auto pr-2 scrollbar-thin animate-stagger-2">
         {projects.map((project, index) => (
           <a
             key={index}
