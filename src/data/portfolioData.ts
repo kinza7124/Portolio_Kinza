@@ -124,7 +124,9 @@ export const portfolioData = {
     "Backend": ["Node.js", "Express.js"],
     "Databases": ["MongoDB", "PostgreSQL", "MySQL"],
     "AI/ML": ["Machine Learning", "Deep Learning", "LLMs", "LLM Orchestration", "LangChain", "Multi-Agent Orchestration", "RAG", "NLP", "FastAPI", "Vector Databases", "n8n Automation", "AI Tools"],
-    "Tools": ["Git", "GitHub", "Docker", "Jira", "Figma"]
+    "Tools": ["Git", "GitHub", "Docker", "Vercel", "Jira", "Figma"],
+    "Soft Skills": ["Team Collaboration", "Leadership", "Communication", "Problem Solving", "Critical Thinking", "Time Management"],
+    "Relevant Coursework": ["Data Structures & Algorithms", "OOP", "Database Systems", "ERD Design", "Software Design (Use Cases, Class Diagrams, Gantt Charts, Architecture Diagrams)", "System Design", "Computer Networks (DNS, VLANs, ACLs)", "Operating Systems (Threads, Mutexes, Processes)"]
   },
   
   projects: [
