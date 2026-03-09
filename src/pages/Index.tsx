@@ -126,7 +126,7 @@ const Index = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <span className="text-xs tracking-[0.3em] uppercase text-primary/70 font-medium">
-                ♔ Portfolio ♔
+                ♔ Strategic Portfolio ♔
               </span>
             </motion.div>
             
