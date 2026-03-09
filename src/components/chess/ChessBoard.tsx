@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChessPiece } from "./ChessPiece";
 
-export type PieceSection = "about" | "projects" | "skills" | "experience" | "achievements" | "contact" | null;
+export type PieceSection = "about" | "projects" | "skills" | "experience" | "education" | "leadership" | "achievements" | "contact" | null;
 
 interface ChessBoardProps {
   onPieceSelect: (section: PieceSection) => void;
