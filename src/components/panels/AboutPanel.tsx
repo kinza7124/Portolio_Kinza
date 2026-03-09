@@ -36,18 +36,3 @@ export const AboutPanel = () => {
           <span>{about.email}</span>
         </div>
       </div>
-      
-      <div className="pt-4 border-t border-border">
-        <div className="flex items-start gap-3">
-          <GraduationCap className="w-5 h-5 text-primary mt-0.5" />
-          <div>
-            <h4 className="font-medium text-foreground">{about.education.university}</h4>
-            <p className="text-sm text-muted-foreground">{about.education.degree}</p>
-            <p className="text-sm text-primary font-medium">GPA: {about.education.gpa}</p>
-            <p className="text-xs text-muted-foreground">{about.education.duration}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
