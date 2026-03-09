@@ -115,7 +115,7 @@ export const portfolioData = {
     "Frontend": ["React", "Next.js", "React Native", "Tailwind CSS", "Framer Motion", "HTML", "CSS"],
     "Backend": ["Node.js", "Express.js"],
     "Databases": ["MongoDB", "PostgreSQL", "MySQL"],
-    "AI/ML": ["Machine Learning", "Deep Learning", "AI Tools", "RAGs", "NLP"],
+    "AI/ML": ["Machine Learning", "Deep Learning", "LLMs", "LLM Orchestration", "LangChain", "Multi-Agent Orchestration", "RAG", "NLP", "FastAPI", "Vector Databases", "n8n Automation", "AI Tools"],
     "Tools": ["Git", "GitHub", "Docker", "Jira", "Figma"]
   },
   
