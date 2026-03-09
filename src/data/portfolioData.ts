@@ -34,6 +34,14 @@ export const portfolioData = {
   
   experience: [
     {
+      role: "App Testing Program Participant",
+      company: "9D Technologies",
+      period: "2026",
+      description: "Beta tester conducting comprehensive user experience testing and quality assurance for applications. Evaluated app functionality, UI/UX, performance, and overall user experience.",
+      tags: ["Beta testing", "User experience testing", "Quality assurance"],
+      link: ""
+    },
+    {
       role: "Teaching Assistant of Database System",
       company: "FAST NUCES",
       period: "Feb 2026 - May 2026",
@@ -47,14 +55,6 @@ export const portfolioData = {
       period: "Aug 2025 - Dec 2025",
       description: "Mentored 40+ students on Data Structures & Algorithms, conducting code reviews and evaluating 20+ complex semester projects involving Trees, Graphs, and Heap implementations.",
       tags: ["Mentorship", "Code reviews", "Project evaluation"],
-      link: ""
-    },
-    {
-      role: "App Testing Program Participant",
-      company: "9D Technologies",
-      period: "2025",
-      description: "Beta tester conducting comprehensive user experience testing and quality assurance for applications. Evaluated app functionality, UI/UX, performance, and overall user experience.",
-      tags: ["Beta testing", "User experience testing", "Quality assurance"],
       link: ""
     },
     {
