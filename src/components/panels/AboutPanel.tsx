@@ -1,5 +1,5 @@
 import { portfolioData } from "@/data/portfolioData";
-import { MapPin, Phone, Mail, GraduationCap } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 export const AboutPanel = () => {
   const { about } = portfolioData;
