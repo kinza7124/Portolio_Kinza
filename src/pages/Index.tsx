@@ -57,21 +57,19 @@ const Index = () => {
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* Floating particles */}
-      {Array.from({ length: 20 }).map((_, i) => (
+      {/* Floating particles — reduced for performance */}
+      {Array.from({ length: 10 }).map((_, i) => (
         <motion.div
           key={`particle-${i}`}
-          className="absolute w-1 h-1 rounded-full bg-primary/20 pointer-events-none"
-          style={{ left: `${5 + (i * 4.7) % 90}%`, top: `${8 + (i * 7.3) % 84}%` }}
+          className="absolute w-1 h-1 rounded-full bg-primary/15 pointer-events-none"
+          style={{ left: `${5 + (i * 9.3) % 90}%`, top: `${8 + (i * 9.7) % 84}%` }}
           animate={{
-            y: [0, -30 - (i % 3) * 15, 10, -20, 0],
-            x: [0, (i % 2 === 0 ? 15 : -15), (i % 2 === 0 ? -10 : 10), 0],
-            opacity: [0.1, 0.4, 0.15, 0.35, 0.1],
-            scale: [1, 1.5, 0.8, 1.2, 1],
+            y: [0, -25, 8, -15, 0],
+            opacity: [0.08, 0.3, 0.1, 0.25, 0.08],
           }}
           transition={{
-            duration: 8 + (i % 5) * 2,
-            delay: i * 0.4,
+            duration: 10 + (i % 4) * 3,
+            delay: i * 0.6,
             repeat: Infinity,
             ease: "easeInOut",
           }}
