@@ -26,7 +26,7 @@ export const SkillsPanel = () => {
       <div className="space-y-5 max-h-[60vh] overflow-y-auto pr-2 animate-stagger-2">
         {Object.entries(skills).map(([category, skillList]) => (
           <div key={category} className="space-y-2">
-            <h3 className="text-sm font-medium text-primary uppercase tracking-wider flex items-center gap-2">
+            <h3 className="group text-sm font-medium text-primary uppercase tracking-wider flex items-center gap-2 cursor-default">
               {categoryIcons[category]}
               {category}
             </h3>
