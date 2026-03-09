@@ -37,11 +37,47 @@ const Index = () => {
     <div className="min-h-screen relative overflow-hidden" style={{
       background: "radial-gradient(ellipse at 50% 0%, hsl(220 18% 12%) 0%, hsl(220 18% 6%) 50%, hsl(220 20% 4%) 100%)"
     }}>
-      {/* Ambient radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-30 pointer-events-none"
-        style={{ background: "var(--gradient-radial-gold)" }}
+      {/* Animated ambient orbs */}
+      <motion.div
+        className="absolute w-[600px] h-[600px] rounded-full pointer-events-none opacity-20"
+        style={{ background: "radial-gradient(circle, hsla(42, 85%, 53%, 0.15), transparent 70%)", top: "10%", left: "20%" }}
+        animate={{ x: [0, 80, -40, 60, 0], y: [0, -60, 30, -80, 0], scale: [1, 1.2, 0.9, 1.1, 1] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
       />
-      
+      <motion.div
+        className="absolute w-[500px] h-[500px] rounded-full pointer-events-none opacity-15"
+        style={{ background: "radial-gradient(circle, hsla(220, 60%, 40%, 0.12), transparent 70%)", bottom: "5%", right: "10%" }}
+        animate={{ x: [0, -60, 40, -30, 0], y: [0, 40, -50, 20, 0], scale: [1, 0.85, 1.15, 0.95, 1] }}
+        transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute w-[400px] h-[400px] rounded-full pointer-events-none opacity-10"
+        style={{ background: "radial-gradient(circle, hsla(42, 70%, 58%, 0.1), transparent 70%)", top: "50%", right: "30%" }}
+        animate={{ x: [0, 50, -70, 30, 0], y: [0, -40, 60, -20, 0] }}
+        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      {/* Floating particles */}
+      {Array.from({ length: 20 }).map((_, i) => (
+        <motion.div
+          key={`particle-${i}`}
+          className="absolute w-1 h-1 rounded-full bg-primary/20 pointer-events-none"
+          style={{ left: `${5 + (i * 4.7) % 90}%`, top: `${8 + (i * 7.3) % 84}%` }}
+          animate={{
+            y: [0, -30 - (i % 3) * 15, 10, -20, 0],
+            x: [0, (i % 2 === 0 ? 15 : -15), (i % 2 === 0 ? -10 : 10), 0],
+            opacity: [0.1, 0.4, 0.15, 0.35, 0.1],
+            scale: [1, 1.5, 0.8, 1.2, 1],
+          }}
+          transition={{
+            duration: 8 + (i % 5) * 2,
+            delay: i * 0.4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      ))}
+
       {/* Floating chess pieces */}
       {floatingPieces.map((p, i) => (
         <motion.div
@@ -65,10 +101,15 @@ const Index = () => {
       ))}
 
       {/* Subtle grid pattern */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
-        backgroundImage: `linear-gradient(hsl(var(--primary) / 0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary) / 0.3) 1px, transparent 1px)`,
-        backgroundSize: '60px 60px',
-      }} />
+      <motion.div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `linear-gradient(hsl(var(--primary) / 0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary) / 0.3) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px',
+        }}
+        animate={{ opacity: [0.02, 0.05, 0.02] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       <div className="container mx-auto px-4 py-8 lg:py-16 relative z-10">
         <div className="max-w-6xl mx-auto">
