@@ -91,7 +91,7 @@ const Index = () => {
       {floatingPieces.map((p, i) => (
         <motion.div
           key={i}
-          className={`absolute ${p.size} text-primary/[0.06] pointer-events-none select-none`}
+          className={`absolute ${p.size} text-primary/[0.12] pointer-events-none select-none`}
           style={{ left: p.x, top: p.y }}
           animate={{
             y: [0, -p.range, p.range * 0.4, -p.range * 0.6, 0],
