@@ -22,11 +22,24 @@ const sectionComponents: Record<string, React.ComponentType> = {
   projects: ProjectsPanel,
   skills: SkillsPanel,
   experience: ExperiencePanel,
+  education: EducationPanel,
+  leadership: LeadershipPanel,
   achievements: AchievementsPanel,
   contact: ContactPanel,
 };
 
 export const ContentSheet = ({ section, onClose }: ContentSheetProps) => {
+  const prevSection = useRef<PieceSection>(null);
+  
+  useEffect(() => {
+    if (section && !prevSection.current) {
+      sounds.panelOpen();
+    } else if (!section && prevSection.current) {
+      sounds.panelClose();
+    }
+    prevSection.current = section;
+  }, [section]);
+  
   if (!section) return null;
   
   const PanelComponent = sectionComponents[section];

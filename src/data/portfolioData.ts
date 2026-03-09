@@ -6,13 +6,31 @@ export const portfolioData = {
     phone: "+92 3242217127",
     email: "kinzaafzal07122004@gmail.com",
     bio: "AI/ML enthusiast with hands-on experience in Machine Learning, Deep Learning, and AI systems. Passionate about contributing to innovative projects through data-driven modeling and problem-solving.",
-    education: {
-      university: "FAST NUCES",
-      degree: "Bachelors in Computer Science",
-      gpa: "3.91/4.00",
-      duration: "2023-2027"
-    }
   },
+  
+  education: [
+    {
+      degree: "Bachelors in Computer Science",
+      institution: "FAST NUCES",
+      period: "2023-2027",
+      gpa: "3.93/4.00",
+      description: "Currently pursuing BS in Computer Science with focus on AI/ML and software development."
+    },
+    {
+      degree: "A Levels Excellence",
+      institution: "Highbrow School & College",
+      period: "",
+      gpa: "3A* 1A",
+      description: "Achieved 3A* 1A grades in A Levels examinations."
+    },
+    {
+      degree: "O Levels Excellence",
+      institution: "Happy Palace Grammar School",
+      period: "",
+      gpa: "8A*",
+      description: "Achieved 8A* grades in O Levels examinations."
+    }
+  ],
   
   experience: [
     {
@@ -20,35 +38,43 @@ export const portfolioData = {
       company: "9D Technologies",
       period: "2025",
       description: "Beta tester conducting comprehensive user experience testing and quality assurance for applications. Evaluated app functionality, UI/UX, performance, and overall user experience.",
-      tags: ["Beta testing", "User experience testing", "Quality assurance"]
+      tags: ["Beta testing", "User experience testing", "Quality assurance"],
+      link: ""
     },
     {
       role: "Teaching Assistant of Data Structures",
       company: "FAST NUCES",
       period: "Aug 2025 - Dec 2025",
       description: "Mentored 40+ students on Data Structures & Algorithms, conducting code reviews and evaluating 20+ complex semester projects involving Trees, Graphs, and Heap implementations.",
-      tags: ["Mentorship", "Code reviews", "Project evaluation"]
+      tags: ["Mentorship", "Code reviews", "Project evaluation"],
+      link: ""
     },
     {
       role: "Open Source Contributor",
       company: "GirlScript Summer of Code (GSSoC)",
       period: "2025",
       description: "Contributed to ML/AI open-source projects by implementing features, fixing bugs, and optimizing Python code for high-impact repositories.",
-      tags: ["ML/AI Projects", "Feature implementation", "Code optimization"]
-    },
+      tags: ["ML/AI Projects", "Feature implementation", "Code optimization"],
+      link: "https://gssoc.girlscript.tech/"
+    }
+  ],
+  
+  leadership: [
     {
       role: "Assistant Director - GR TechFest",
-      company: "Developers' Day - ACM NUCES",
+      organization: "Developers' Day - ACM NUCES",
       period: "Feb 2026 - Present",
       description: "Leading guest relations and coordinating event operations for TechFest 2026, including speaker management and collaboration across organizing teams.",
-      tags: ["Leadership", "Event Management", "Coordination"]
+      tags: ["Leadership", "Event Management", "Coordination"],
+      link: "https://www.linkedin.com/company/acm-nuces-karachi/"
     },
     {
       role: "Design Co-Head",
-      company: "ACM NUCES KHI",
+      organization: "ACM NUCES KHI",
       period: "Aug 2025 - Present",
       description: "Leading the visual identity and design strategy for the ACM student chapter, overseeing branding and creative direction.",
-      tags: ["Design", "Branding", "Leadership"]
+      tags: ["Design", "Branding", "Leadership"],
+      link: "https://www.linkedin.com/company/acm-nuces-karachi/"
     }
   ],
   
@@ -129,7 +155,8 @@ export const portfolioData = {
       title: "Software Engineer Certificate",
       organization: "HackerRank",
       period: "Jan 2026",
-      description: "Certified for software engineering skills."
+      description: "Certified for software engineering skills.",
+      link: "https://www.hackerrank.com/certificates/iframe/ce3f53f04ed4"
     },
     {
       title: "Introduction to AI Certificate",
@@ -148,24 +175,13 @@ export const portfolioData = {
       organization: "Deloitte",
       period: "Aug 2025",
       description: "Completed technology job simulation program."
-    },
-    {
-      title: "A Levels Excellence",
-      organization: "Highbrow School & College",
-      period: "",
-      description: "Achieved 3A* 1A grades in A Levels examinations."
-    },
-    {
-      title: "O Levels Excellence",
-      organization: "Happy Palace Grammar School",
-      period: "",
-      description: "Achieved 8A* grades in O Levels examinations."
     }
   ],
   
   contact: {
     github: "https://github.com/kinza7124",
     linkedin: "https://www.linkedin.com/in/kinza-afzal7-/",
-    email: "kinzaafzal07122004@gmail.com"
+    email: "kinzaafzal07122004@gmail.com",
+    phone: "+92 3242217127"
   }
 };

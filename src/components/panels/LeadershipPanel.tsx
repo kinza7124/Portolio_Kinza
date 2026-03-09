@@ -2,35 +2,33 @@ import { portfolioData } from "@/data/portfolioData";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
 
-export const ExperiencePanel = () => {
-  const { experience } = portfolioData;
+export const LeadershipPanel = () => {
+  const { leadership } = portfolioData;
   
   return (
     <div className="space-y-6 animate-fade-in">
       <div className="flex items-center gap-2">
-        <span className="text-4xl">♘</span>
-        <h2 className="text-3xl font-serif gold-text">Experience</h2>
+        <span className="text-4xl">♞</span>
+        <h2 className="text-3xl font-serif gold-text">Leadership & Volunteering</h2>
       </div>
       
       <div className="relative space-y-0 max-h-[60vh] overflow-y-auto pr-2">
-        {/* Timeline line */}
         <div className="absolute left-2 top-2 bottom-2 w-px bg-border" />
         
-        {experience.map((exp, index) => (
+        {leadership.map((item, index) => (
           <div key={index} className="relative pl-8 pb-6 last:pb-0">
-            {/* Timeline dot */}
             <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-background" />
             
             <div className="space-y-2">
               <div className="flex items-start justify-between gap-2">
                 <div>
-                  <h3 className="font-medium text-foreground">{exp.role}</h3>
-                  <p className="text-sm text-primary">{exp.company}</p>
-                  <p className="text-xs text-muted-foreground">{exp.period}</p>
+                  <h3 className="font-medium text-foreground">{item.role}</h3>
+                  <p className="text-sm text-primary">{item.organization}</p>
+                  <p className="text-xs text-muted-foreground">{item.period}</p>
                 </div>
-                {exp.link && (
+                {item.link && (
                   <a 
-                    href={exp.link} 
+                    href={item.link} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="p-1.5 rounded-full bg-secondary/50 hover:bg-primary/20 text-muted-foreground hover:text-primary transition-colors"
@@ -40,12 +38,10 @@ export const ExperiencePanel = () => {
                 )}
               </div>
               
-              <p className="text-sm text-muted-foreground">
-                {exp.description}
-              </p>
+              <p className="text-sm text-muted-foreground">{item.description}</p>
               
               <div className="flex flex-wrap gap-1.5">
-                {exp.tags.map((tag, tagIndex) => (
+                {item.tags.map((tag, tagIndex) => (
                   <Badge 
                     key={tagIndex} 
                     variant="outline" 

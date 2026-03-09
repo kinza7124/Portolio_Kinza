@@ -35,8 +35,14 @@ export const ChessPiece = ({
     <Tooltip>
       <TooltipTrigger asChild>
         <button
-          onClick={onClick}
-          onMouseEnter={() => setIsHovered(true)}
+          onClick={() => {
+            sounds.pieceClick();
+            onClick();
+          }}
+          onMouseEnter={() => {
+            setIsHovered(true);
+            sounds.pieceHover();
+          }}
           onMouseLeave={() => setIsHovered(false)}
           className={`
             chess-piece relative flex items-center justify-center
