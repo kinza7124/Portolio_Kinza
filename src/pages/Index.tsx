@@ -5,14 +5,25 @@ import { ContentSheet } from "@/components/panels/ContentSheet";
 import { portfolioData } from "@/data/portfolioData";
 
 const floatingPieces = [
-  { symbol: "♔", x: "5%", y: "12%", size: "text-3xl", delay: 0, duration: 7 },
-  { symbol: "♕", x: "88%", y: "8%", size: "text-2xl", delay: 1.2, duration: 8 },
-  { symbol: "♗", x: "15%", y: "75%", size: "text-2xl", delay: 2.4, duration: 6.5 },
-  { symbol: "♘", x: "82%", y: "65%", size: "text-xl", delay: 0.8, duration: 7.5 },
-  { symbol: "♖", x: "92%", y: "85%", size: "text-2xl", delay: 3, duration: 6 },
-  { symbol: "♙", x: "8%", y: "45%", size: "text-xl", delay: 1.8, duration: 8.5 },
-  { symbol: "♚", x: "75%", y: "35%", size: "text-lg", delay: 2, duration: 9 },
-  { symbol: "♛", x: "30%", y: "88%", size: "text-lg", delay: 3.5, duration: 7 },
+  // Large accent pieces
+  { symbol: "♔", x: "4%", y: "10%", size: "text-5xl", delay: 0, duration: 14, range: 20 },
+  { symbol: "♕", x: "90%", y: "6%", size: "text-4xl", delay: 1.5, duration: 16, range: 18 },
+  { symbol: "♖", x: "93%", y: "80%", size: "text-4xl", delay: 2.5, duration: 13, range: 16 },
+  { symbol: "♚", x: "3%", y: "82%", size: "text-4xl", delay: 3.2, duration: 15, range: 14 },
+  // Medium drifting pieces
+  { symbol: "♗", x: "18%", y: "30%", size: "text-3xl", delay: 0.8, duration: 12, range: 22 },
+  { symbol: "♘", x: "78%", y: "42%", size: "text-3xl", delay: 2, duration: 11, range: 20 },
+  { symbol: "♛", x: "55%", y: "85%", size: "text-3xl", delay: 1, duration: 13, range: 18 },
+  { symbol: "♜", x: "35%", y: "8%", size: "text-3xl", delay: 3.8, duration: 14, range: 16 },
+  { symbol: "♝", x: "68%", y: "18%", size: "text-2xl", delay: 0.5, duration: 10, range: 24 },
+  { symbol: "♞", x: "25%", y: "60%", size: "text-2xl", delay: 2.8, duration: 12, range: 20 },
+  // Small subtle pieces
+  { symbol: "♙", x: "12%", y: "50%", size: "text-xl", delay: 1.8, duration: 9, range: 15 },
+  { symbol: "♙", x: "45%", y: "92%", size: "text-xl", delay: 4, duration: 10, range: 12 },
+  { symbol: "♟", x: "60%", y: "55%", size: "text-xl", delay: 0.3, duration: 11, range: 18 },
+  { symbol: "♟", x: "85%", y: "30%", size: "text-lg", delay: 3, duration: 12, range: 14 },
+  { symbol: "♙", x: "40%", y: "38%", size: "text-lg", delay: 2.2, duration: 10, range: 10 },
+  { symbol: "♟", x: "72%", y: "72%", size: "text-lg", delay: 1.4, duration: 13, range: 16 },
 ];
 
 const legendItems = [
@@ -80,12 +91,13 @@ const Index = () => {
       {floatingPieces.map((p, i) => (
         <motion.div
           key={i}
-          className={`absolute ${p.size} text-primary/10 pointer-events-none select-none`}
+          className={`absolute ${p.size} text-primary/[0.06] pointer-events-none select-none`}
           style={{ left: p.x, top: p.y }}
           animate={{
-            y: [0, -12, 4, -8, 0],
-            rotate: [0, 3, -2, 1, 0],
-            opacity: [0.08, 0.15, 0.08],
+            y: [0, -p.range, p.range * 0.4, -p.range * 0.6, 0],
+            x: [0, p.range * 0.5 * (i % 2 === 0 ? 1 : -1), -p.range * 0.3 * (i % 2 === 0 ? 1 : -1), 0],
+            rotate: [0, 8, -5, 3, 0],
+            opacity: [0.04, 0.12, 0.06, 0.1, 0.04],
           }}
           transition={{
             duration: p.duration,
