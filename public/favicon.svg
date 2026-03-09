@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Kinza Afzal Portfolio Logo</title>
+  <desc id="desc">A gold rook chess icon with the initials KA centered on a dark circular background.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7d774" />
+      <stop offset="100%" stop-color="#b7892b" />
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="#0f131d" />
+  <path d="M40 30h8v10h8V30h8v10h8V30h8v20h-6v12h6v10H48V62h6V50h-6V30zM44 78h40v10H44zM38 92h52v10H38z" fill="url(#gold)" />
+  <text x="64" y="70" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#f7d774">KA</text>
+</svg>

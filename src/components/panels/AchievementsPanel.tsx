@@ -22,7 +22,10 @@ export const AchievementsPanel = () => {
       </motion.div>
       
       <div className="space-y-3 max-h-[65vh] overflow-y-auto pr-1">
-        {achievements.map((achievement, index) => (
+        {achievements.map((achievement, index) => {
+          const achievementLink = "link" in achievement ? achievement.link : undefined;
+
+          return (
           <motion.div 
             key={index}
             className="p-4 rounded-xl bg-secondary/20 border border-border/15 hover:border-primary/20 transition-all duration-300 card-hover"
@@ -37,8 +40,8 @@ export const AchievementsPanel = () => {
               <div className="space-y-1 flex-1">
                 <div className="flex items-start justify-between gap-2">
                   <h3 className="font-serif font-semibold text-foreground text-sm">{achievement.title}</h3>
-                  {(achievement as any).link && (
-                    <a href={(achievement as any).link} target="_blank" rel="noopener noreferrer"
+                  {achievementLink && (
+                    <a href={achievementLink} target="_blank" rel="noopener noreferrer"
                       className="p-1 rounded-md bg-primary/10 hover:bg-primary/20 text-primary/60 hover:text-primary transition-colors shrink-0">
                       <ExternalLink className="w-3 h-3" />
                     </a>
@@ -54,7 +57,8 @@ export const AchievementsPanel = () => {
               </div>
             </div>
           </motion.div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
