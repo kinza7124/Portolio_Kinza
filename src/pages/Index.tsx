@@ -22,7 +22,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.02"%3E%3Cpath d="M20 20c0 0 0-8 0-8s8 0 8 0 0 8 0 8-8 0-8 0Z"/%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+      <div className="absolute inset-0 opacity-30" style={{ 
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M20 20c0 0 0-8 0-8s8 0 8 0 0 8 0 8-8 0-8 0Z'/%3E%3C/g%3E%3C/svg%3E")` 
+      }} />
       <div className="absolute top-20 left-10 w-2 h-2 bg-primary/30 rounded-full blur-sm animate-float" style={{ animationDelay: '0s' }} />
       <div className="absolute top-40 right-20 w-1 h-1 bg-primary/20 rounded-full blur-sm animate-float" style={{ animationDelay: '1s' }} />
       <div className="absolute bottom-40 left-20 w-1.5 h-1.5 bg-primary/25 rounded-full blur-sm animate-float" style={{ animationDelay: '2s' }} />
