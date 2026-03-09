@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { sounds } from "@/lib/sounds";
 
 interface ChessPieceProps {
   type: "king" | "queen" | "bishop" | "knight" | "rook" | "pawn";
