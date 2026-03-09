@@ -18,11 +18,11 @@ export const AboutPanel = () => {
         </div>
       </div>
       
-      <p className="text-muted-foreground leading-relaxed">
+      <p className="text-muted-foreground leading-relaxed animate-stagger-2">
         {about.bio}
       </p>
       
-      <div className="space-y-3">
+      <div className="space-y-3 animate-stagger-3">
         <div className="flex items-center gap-3 text-sm text-muted-foreground">
           <MapPin className="w-4 h-4 text-primary" />
           <span>{about.location}</span>

@@ -6,12 +6,12 @@ export const EducationPanel = () => {
   
   return (
     <div className="space-y-6 animate-panel-content">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 animate-stagger-1">
         <span className="text-4xl">♗</span>
         <h2 className="text-3xl font-serif gold-text">Education</h2>
       </div>
       
-      <div className="space-y-4">
+      <div className="space-y-4 animate-stagger-2">
         {education.map((edu, index) => (
           <div 
             key={index} 
