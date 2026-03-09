@@ -115,30 +115,6 @@ export const portfolioData = {
       description: "Directed social media visual content and logo designs for national level events. Led the design team in creating impactful visual identities for IEEE initiatives.",
       tags: ["Design Leadership", "Visual Content", "Branding"],
       link: ""
-    },
-    {
-      role: "Social Media Manager",
-      organization: "Google Developer Group on Campus - FAST NUCES Karachi",
-      period: "Sep 2024 - Present",
-      description: "Managing social media presence and content strategy for GDG on Campus, driving community engagement and event promotion.",
-      tags: ["Social Media", "Content Strategy", "Community"],
-      link: "https://gdg.community.dev/"
-    },
-    {
-      role: "Social Media Manager",
-      organization: "SOFTEC - FAST NUCES",
-      period: "2024",
-      description: "Managed social media campaigns and outreach for SOFTEC, one of the largest student-run tech events in Pakistan.",
-      tags: ["Social Media", "Event Promotion", "Outreach"],
-      link: ""
-    },
-    {
-      role: "Graphic Designer",
-      organization: "ACM NUCES KHI",
-      period: "Oct 2023 - Aug 2025",
-      description: "Created visual content and marketing materials for ACM events and campaigns, contributing to the chapter's brand identity.",
-      tags: ["Graphic Design", "Marketing", "Visual Content"],
-      link: "https://www.linkedin.com/company/acm-nuces-karachi/"
     }
   ],
   
