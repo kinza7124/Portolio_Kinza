@@ -1,11 +1,11 @@
 import worklogImg from "@/assets/projects/worklog.jpg";
-import dsaMentorImg from "@/assets/projects/dsa-mentor.jpg";
-import networkLogImg from "@/assets/projects/network-log.jpg";
-import bugPredictorImg from "@/assets/projects/bug-predictor.jpg";
-import algoVisualizerImg from "@/assets/projects/algo-visualizer.jpg";
-import bookRecommenderImg from "@/assets/projects/book-recommender.jpg";
-import lmsStudioImg from "@/assets/projects/lms-studio.jpg";
-import netlabproImg from "@/assets/projects/netlabpro.jpg";
+import dsaMentorImg from "@/assets/projects/dsa-mentor.png";
+import networkLogImg from "@/assets/projects/network-log.png";
+import bugPredictorImg from "@/assets/projects/bug-predictor.png";
+import algoVisualizerImg from "@/assets/projects/algo-visualizer.png";
+import bookRecommenderImg from "@/assets/projects/book-recommender.png";
+import lmsStudioImg from "@/assets/projects/lms-studio.png";
+import netlabproImg from "@/assets/projects/netlabpro.png";
 
 export const portfolioData = {
   about: {
