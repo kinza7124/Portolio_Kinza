@@ -1,3 +1,12 @@
+import worklogImg from "@/assets/projects/worklog.jpg";
+import dsaMentorImg from "@/assets/projects/dsa-mentor.jpg";
+import networkLogImg from "@/assets/projects/network-log.jpg";
+import bugPredictorImg from "@/assets/projects/bug-predictor.jpg";
+import algoVisualizerImg from "@/assets/projects/algo-visualizer.jpg";
+import bookRecommenderImg from "@/assets/projects/book-recommender.jpg";
+import lmsStudioImg from "@/assets/projects/lms-studio.jpg";
+import netlabproImg from "@/assets/projects/netlabpro.jpg";
+
 export const portfolioData = {
   about: {
     name: "Kinza Afzal",
