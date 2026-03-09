@@ -91,13 +91,13 @@ const Index = () => {
       {floatingPieces.map((p, i) => (
         <motion.div
           key={i}
-          className={`absolute ${p.size} text-primary/[0.06] pointer-events-none select-none`}
+          className={`absolute ${p.size} text-primary/[0.12] pointer-events-none select-none`}
           style={{ left: p.x, top: p.y }}
           animate={{
             y: [0, -p.range, p.range * 0.4, -p.range * 0.6, 0],
             x: [0, p.range * 0.5 * (i % 2 === 0 ? 1 : -1), -p.range * 0.3 * (i % 2 === 0 ? 1 : -1), 0],
             rotate: [0, 8, -5, 3, 0],
-            opacity: [0.04, 0.12, 0.06, 0.1, 0.04],
+            opacity: [0.08, 0.22, 0.1, 0.18, 0.08],
           }}
           transition={{
             duration: p.duration,
