@@ -1,3 +1,12 @@
+import worklogImg from "@/assets/projects/worklog.jpg";
+import dsaMentorImg from "@/assets/projects/dsa-mentor.jpg";
+import networkLogImg from "@/assets/projects/network-log.jpg";
+import bugPredictorImg from "@/assets/projects/bug-predictor.jpg";
+import algoVisualizerImg from "@/assets/projects/algo-visualizer.jpg";
+import bookRecommenderImg from "@/assets/projects/book-recommender.jpg";
+import lmsStudioImg from "@/assets/projects/lms-studio.jpg";
+import netlabproImg from "@/assets/projects/netlabpro.jpg";
+
 export const portfolioData = {
   about: {
     name: "Kinza Afzal",
@@ -134,49 +143,57 @@ export const portfolioData = {
       title: "Worklog App | ACM TechOps Team",
       description: "Hierarchical worklog tracking platform with role-based access, 5-state progress flow, credits management, ratings, and file attachments. Built backend and PostgreSQL/Prisma architecture.",
       tech: ["PostgreSQL", "Prisma", "Backend Development"],
-      link: "https://drive.google.com/file/d/1l9_X4fIEuGKjuc3v6A3IZWFY8PsyEPOR/view"
+      link: "https://drive.google.com/file/d/1l9_X4fIEuGKjuc3v6A3IZWFY8PsyEPOR/view",
+      image: worklogImg
     },
     {
       title: "DSA Mentor Pro",
       description: "High-fidelity, multimodal DSA tutoring platform powered by Google Gemini AI with agentic reasoning, chain-of-thought prompting, and structured JSON schema output.",
       tech: ["Google Gemini AI", "React", "Agentic AI"],
-      link: "https://github.com/kinza7124/DSA-Coding-Mentor"
+      link: "https://github.com/kinza7124/DSA-Coding-Mentor",
+      image: dsaMentorImg
     },
     {
       title: "Network Log Analyzer",
       description: "ML model utilizing NLP techniques to monitor network logs and detect anomalies with automated email alerts via ChatOps.",
       tech: ["Machine Learning", "NLP", "Python", "Streamlit"],
-      link: "https://network-log-analyzer-7aue37agzfrjiri7tv4hkd.streamlit.app/"
+      link: "https://network-log-analyzer-7aue37agzfrjiri7tv4hkd.streamlit.app/",
+      image: networkLogImg
     },
     {
       title: "Bug Type Predictor",
       description: "ML & NLP preprocessing pipeline to predict bug types from text data using advanced classification and ensemble learning techniques.",
       tech: ["Machine Learning", "NLP", "Classification"],
-      link: "https://predicting-bug-type-ml-project.vercel.app/"
+      link: "https://predicting-bug-type-ml-project.vercel.app/",
+      image: bugPredictorImg
     },
     {
       title: "Algorithm Visualiser",
       description: "Interactive platform visualizing sorting, searching, and graph algorithms in real-time for learning complex algorithmic concepts.",
       tech: ["JavaScript", "Algorithms", "Visualization"],
-      link: "https://algorithm-visualiser-eight.vercel.app/"
+      link: "https://algorithm-visualiser-eight.vercel.app/",
+      image: algoVisualizerImg
     },
     {
       title: "Book Recommender System",
       description: "ML-powered recommendation system using Popularity-Based and Collaborative Filtering techniques for personalized book suggestions.",
       tech: ["Machine Learning", "Python", "Recommender Systems"],
-      link: "https://github.com/kinza7124/Book-Recommender-System"
+      link: "https://github.com/kinza7124/Book-Recommender-System",
+      image: bookRecommenderImg
     },
     {
       title: "LMS Studio",
       description: "Comprehensive Learning Management System with role-based access, course management, assignment submission, and Google Classroom-like features.",
       tech: ["Next.js", "TypeScript", "PostgreSQL", "Express.js"],
-      link: "https://lnkd.in/d3d_diT8"
+      link: "https://lnkd.in/d3d_diT8",
+      image: lmsStudioImg
     },
     {
       title: "NetLabPro",
       description: "Interactive learning and gamified platform for Computer Network Labs with hands-on networking concept modules.",
       tech: ["React", "Gamification", "Education"],
-      link: "https://net-lab-pro.vercel.app/"
+      link: "https://net-lab-pro.vercel.app/",
+      image: netlabproImg
     }
   ],
   
