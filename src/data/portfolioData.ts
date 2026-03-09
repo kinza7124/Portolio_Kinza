@@ -90,7 +90,7 @@ export const portfolioData = {
       period: "Aug 2025 - Present",
       description: "Working as part of ACM Tech Operations which handles all technical operations. Contributed to ACM NUCES CODER'S CUP 2025 and received Certificate of Appreciation for outstanding work.",
       tags: ["Tech Operations", "Technical Leadership", "Event Coordination"],
-      link: "https://www.linkedin.com/company/acm-nuces-karachi/"
+      link: "https://tech-operations-showcase.raahim-irfan.workers.dev/"
     },
     {
       role: "Member - TechOperations Team",
