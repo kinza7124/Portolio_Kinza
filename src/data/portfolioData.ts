@@ -74,7 +74,7 @@ export const portfolioData = {
       period: "Feb 2026 - Present",
       description: "Leading guest relations and coordinating event operations for TechFest 2026, including speaker management and collaboration across organizing teams.",
       tags: ["Leadership", "Event Management", "Coordination"],
-      link: "https://www.linkedin.com/company/acm-nuces-karachi/"
+      link: "https://www.linkedin.com/company/developersday/posts/?feedView=all"
     },
     {
       role: "Design Co-Head",
@@ -85,6 +85,38 @@ export const portfolioData = {
       link: "https://www.linkedin.com/company/acm-nuces-karachi/"
     },
     {
+      role: "Deputy",
+      organization: "ACM NUCES KHI",
+      period: "Aug 2025 - Present",
+      description: "Working as part of ACM Tech Operations which handles all technical operations. Contributed to ACM NUCES CODER'S CUP 2025 and received Certificate of Appreciation for outstanding work.",
+      tags: ["Tech Operations", "Technical Leadership", "Event Coordination"],
+      link: "https://www.linkedin.com/company/acm-nuces-karachi/"
+    },
+    {
+      role: "Member - TechOperations Team",
+      organization: "ACM NUCES KHI",
+      period: "Aug 2025 - Present",
+      description: "Backend Development for Worklog Project. Developed backend for a performance identification platform that links GitHub profiles, allowing admins to rate and analyze commits, PRs, and contributions to identify star performers.",
+      tags: ["Backend Development", "PostgreSQL", "Performance Tracking"],
+      link: "https://tech-operations-showcase.raahim-irfan.workers.dev/"
+    },
+    {
+      role: "Member - Automation Team",
+      organization: "Developers' Day - ACM NUCES",
+      period: "Feb 2025 - Jun 2025",
+      description: "Automation Showcase - DevDay'25. Developed email automation, custom templates, and the results portal frontend for the Developer's Day event.",
+      tags: ["Automation", "Frontend Development", "Email Systems"],
+      link: "https://automation-showcase-devday25.vercel.app/"
+    },
+    {
+      role: "Design Head",
+      organization: "IEEE NUCES KHI",
+      period: "2024 - 2025",
+      description: "Directed social media visual content and logo designs for national level events. Led the design team in creating impactful visual identities for IEEE initiatives.",
+      tags: ["Design Leadership", "Visual Content", "Branding"],
+      link: ""
+    },
+    {
       role: "Social Media Manager",
       organization: "Google Developer Group on Campus - FAST NUCES Karachi",
       period: "Sep 2024 - Present",
@@ -93,20 +125,20 @@ export const portfolioData = {
       link: "https://gdg.community.dev/"
     },
     {
-      role: "Graphic Designer",
-      organization: "ACM NUCES KHI",
-      period: "Oct 2023 - Aug 2025",
-      description: "Created visual content and marketing materials for ACM events and campaigns, contributing to the chapter's brand identity.",
-      tags: ["Graphic Design", "Marketing", "Visual Content"],
-      link: "https://www.linkedin.com/company/acm-nuces-karachi/"
-    },
-    {
       role: "Social Media Manager",
       organization: "SOFTEC - FAST NUCES",
       period: "2024",
       description: "Managed social media campaigns and outreach for SOFTEC, one of the largest student-run tech events in Pakistan.",
       tags: ["Social Media", "Event Promotion", "Outreach"],
       link: ""
+    },
+    {
+      role: "Graphic Designer",
+      organization: "ACM NUCES KHI",
+      period: "Oct 2023 - Aug 2025",
+      description: "Created visual content and marketing materials for ACM events and campaigns, contributing to the chapter's brand identity.",
+      tags: ["Graphic Design", "Marketing", "Visual Content"],
+      link: "https://www.linkedin.com/company/acm-nuces-karachi/"
     }
   ],
   
