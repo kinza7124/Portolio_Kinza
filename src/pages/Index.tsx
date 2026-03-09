@@ -57,24 +57,24 @@ const Index = () => {
 
           {/* Instructions */}
           <div className={`text-center transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '600ms' }}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-card/50 backdrop-blur-sm rounded-full border border-border/30">
-              <span className="text-2xl">♔</span>
-              <span className="text-sm text-muted-foreground">About</span>
+            <div className="inline-flex flex-wrap justify-center items-center gap-2 px-4 py-2 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/30">
+              <span className="text-xl">♔</span>
+              <span className="text-xs text-muted-foreground">About</span>
               <span className="text-muted-foreground/50">•</span>
-              <span className="text-2xl">♕</span>
-              <span className="text-sm text-muted-foreground">Projects</span>
+              <span className="text-xl">♕</span>
+              <span className="text-xs text-muted-foreground">Projects</span>
               <span className="text-muted-foreground/50">•</span>
-              <span className="text-2xl">♗</span>
-              <span className="text-sm text-muted-foreground">Skills</span>
+              <span className="text-xl">♗</span>
+              <span className="text-xs text-muted-foreground">Skills/Education</span>
               <span className="text-muted-foreground/50">•</span>
-              <span className="text-2xl">♘</span>
-              <span className="text-sm text-muted-foreground">Experience</span>
+              <span className="text-xl">♘</span>
+              <span className="text-xs text-muted-foreground">Experience/Leadership</span>
               <span className="text-muted-foreground/50">•</span>
-              <span className="text-2xl">♖</span>
-              <span className="text-sm text-muted-foreground">Achievements</span>
+              <span className="text-xl">♖</span>
+              <span className="text-xs text-muted-foreground">Achievements</span>
               <span className="text-muted-foreground/50">•</span>
-              <span className="text-2xl">♙</span>
-              <span className="text-sm text-muted-foreground">Contact</span>
+              <span className="text-xl">♙</span>
+              <span className="text-xs text-muted-foreground">Contact</span>
             </div>
           </div>
 

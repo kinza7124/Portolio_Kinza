@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChessPiece } from "./ChessPiece";
 
-export type PieceSection = "about" | "projects" | "skills" | "experience" | "achievements" | "contact" | null;
+export type PieceSection = "about" | "projects" | "skills" | "experience" | "education" | "leadership" | "achievements" | "contact" | null;
 
 interface ChessBoardProps {
   onPieceSelect: (section: PieceSection) => void;
@@ -22,7 +22,9 @@ const boardSetup: Array<{
   { row: 7, col: 4, piece: "king", color: "white", section: "about", label: "About Me", description: "Learn about who I am" },
   { row: 7, col: 3, piece: "queen", color: "white", section: "projects", label: "Projects", description: "View my work" },
   { row: 7, col: 2, piece: "bishop", color: "white", section: "skills", label: "Skills", description: "Technical expertise" },
-  { row: 7, col: 5, piece: "knight", color: "white", section: "experience", label: "Experience", description: "Professional journey" },
+  { row: 7, col: 5, piece: "bishop", color: "white", section: "education", label: "Education", description: "Academic journey" },
+  { row: 7, col: 1, piece: "knight", color: "white", section: "experience", label: "Experience", description: "Professional work" },
+  { row: 7, col: 6, piece: "knight", color: "white", section: "leadership", label: "Leadership", description: "Volunteering & roles" },
   { row: 7, col: 0, piece: "rook", color: "white", section: "achievements", label: "Achievements", description: "Honors & awards" },
   { row: 6, col: 4, piece: "pawn", color: "white", section: "contact", label: "Contact", description: "Get in touch" },
   
@@ -30,7 +32,9 @@ const boardSetup: Array<{
   { row: 0, col: 4, piece: "king", color: "black", section: "about", label: "About Me", description: "Learn about who I am" },
   { row: 0, col: 3, piece: "queen", color: "black", section: "projects", label: "Projects", description: "View my work" },
   { row: 0, col: 2, piece: "bishop", color: "black", section: "skills", label: "Skills", description: "Technical expertise" },
-  { row: 0, col: 5, piece: "knight", color: "black", section: "experience", label: "Experience", description: "Professional journey" },
+  { row: 0, col: 5, piece: "bishop", color: "black", section: "education", label: "Education", description: "Academic journey" },
+  { row: 0, col: 1, piece: "knight", color: "black", section: "experience", label: "Experience", description: "Professional work" },
+  { row: 0, col: 6, piece: "knight", color: "black", section: "leadership", label: "Leadership", description: "Volunteering & roles" },
   { row: 0, col: 7, piece: "rook", color: "black", section: "achievements", label: "Achievements", description: "Honors & awards" },
   { row: 1, col: 3, piece: "pawn", color: "black", section: "contact", label: "Contact", description: "Get in touch" },
 ];

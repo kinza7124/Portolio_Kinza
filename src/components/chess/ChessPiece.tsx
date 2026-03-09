@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { sounds } from "@/lib/sounds";
 
 interface ChessPieceProps {
   type: "king" | "queen" | "bishop" | "knight" | "rook" | "pawn";
@@ -34,8 +35,14 @@ export const ChessPiece = ({
     <Tooltip>
       <TooltipTrigger asChild>
         <button
-          onClick={onClick}
-          onMouseEnter={() => setIsHovered(true)}
+          onClick={() => {
+            sounds.pieceClick();
+            onClick();
+          }}
+          onMouseEnter={() => {
+            setIsHovered(true);
+            sounds.pieceHover();
+          }}
           onMouseLeave={() => setIsHovered(false)}
           className={`
             chess-piece relative flex items-center justify-center

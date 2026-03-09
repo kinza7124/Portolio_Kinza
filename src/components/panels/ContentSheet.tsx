@@ -1,12 +1,16 @@
+import { useEffect, useRef } from "react";
 import { Sheet, SheetContent, SheetHeader } from "@/components/ui/sheet";
 import { PieceSection } from "../chess/ChessBoard";
 import { AboutPanel } from "./AboutPanel";
 import { ProjectsPanel } from "./ProjectsPanel";
 import { SkillsPanel } from "./SkillsPanel";
 import { ExperiencePanel } from "./ExperiencePanel";
+import { EducationPanel } from "./EducationPanel";
+import { LeadershipPanel } from "./LeadershipPanel";
 import { AchievementsPanel } from "./AchievementsPanel";
 import { ContactPanel } from "./ContactPanel";
 import { X } from "lucide-react";
+import { sounds } from "@/lib/sounds";
 
 interface ContentSheetProps {
   section: PieceSection;
@@ -18,11 +22,24 @@ const sectionComponents: Record<string, React.ComponentType> = {
   projects: ProjectsPanel,
   skills: SkillsPanel,
   experience: ExperiencePanel,
+  education: EducationPanel,
+  leadership: LeadershipPanel,
   achievements: AchievementsPanel,
   contact: ContactPanel,
 };
 
 export const ContentSheet = ({ section, onClose }: ContentSheetProps) => {
+  const prevSection = useRef<PieceSection>(null);
+  
+  useEffect(() => {
+    if (section && !prevSection.current) {
+      sounds.panelOpen();
+    } else if (!section && prevSection.current) {
+      sounds.panelClose();
+    }
+    prevSection.current = section;
+  }, [section]);
+  
   if (!section) return null;
   
   const PanelComponent = sectionComponents[section];
