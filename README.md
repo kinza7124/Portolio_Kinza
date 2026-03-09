@@ -1,73 +1,82 @@
-# Welcome to your Lovable project
+# Kinza Afzal | Portfolio
 
-## Project info
+Interactive chess-themed portfolio showcasing projects, skills, experience, and achievements.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## ✨ Features
 
-## How can I edit this code?
+- **Interactive Chess Board Navigation** – Select chess pieces to explore different portfolio sections
+- **Smooth Animations** – Framer Motion-powered transitions and effects
+- **Responsive Design** – Optimized for desktop, tablet, and mobile
+- **Production-Ready** – Code-split bundles, clean linting, comprehensive testing
 
-There are several ways of editing your application.
+## 🚀 Quick Start
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- Node.js 18+ and npm installed ([install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Local Development
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone https://github.com/kinza7124/Portolio_Kinza.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to project directory
+cd Portolio_Kinza
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🛠️ Tech Stack
 
-**Use GitHub Codespaces**
+- **Framework:** React 18 + Vite
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS + shadcn/ui
+- **Animations:** Framer Motion
+- **Routing:** React Router
+- **State Management:** React Query
+- **Testing:** Vitest + Testing Library
+- **Linting:** ESLint + TypeScript ESLint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📦 Available Scripts
 
-## What technologies are used for this project?
+```sh
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
+npm run test         # Run tests
+npm run test:watch   # Run tests in watch mode
+```
 
-This project is built with:
+## 🚢 Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Build the project for production:
 
-## How can I deploy this project?
+```sh
+npm run build
+```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+The optimized static files will be generated in the `dist/` directory, ready to deploy to:
+- **Vercel** (recommended)
+- **Netlify**
+- **GitHub Pages**
+- **Cloudflare Pages**
+- Any static hosting provider
 
-## Can I connect a custom domain to my Lovable project?
+## 📄 License
 
-Yes, you can!
+© 2026 Kinza Afzal. All rights reserved.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 👤 Author
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+**Kinza Afzal**
+- GitHub: [@kinza7124](https://github.com/kinza7124)
+- LinkedIn: [kinza-afzal7](https://www.linkedin.com/in/kinza-afzal7-)
+- Email: kinzaafzal07122004@gmail.com
