@@ -215,25 +215,28 @@ export const portfolioData = {
       organization: "HackerRank",
       period: "Jan 2026",
       description: "Certified for software engineering skills.",
-      link: "https://www.hackerrank.com/certificates/iframe/ce3f53f04ed4"
+      link: "https://www.hackerrank.com/certificates/iframe/9592306b93a7"
     },
     {
       title: "Introduction to AI Certificate",
       organization: "Simplilearn",
       period: "Sep 2025",
-      description: "Completed comprehensive introduction to AI concepts and applications."
+      description: "Completed comprehensive introduction to AI concepts and applications.",
+      link: "https://www.linkedin.com/in/kinza-afzal7-/details/certifications"
     },
     {
       title: "Supervised Learning Certificate",
       organization: "DataCamp",
       period: "Sep 2025",
-      description: "Mastered supervised learning techniques using scikit-learn."
+      description: "Mastered supervised learning techniques using scikit-learn.",
+      link: "https://www.linkedin.com/in/kinza-afzal7-/details/certifications"
     },
     {
       title: "Deloitte Job Simulation",
       organization: "Deloitte",
       period: "Aug 2025",
-      description: "Completed technology job simulation program."
+      description: "Completed technology job simulation program.",
+      link: "https://www.linkedin.com/in/kinza-afzal7-/details/certifications"
     }
   ],
   
