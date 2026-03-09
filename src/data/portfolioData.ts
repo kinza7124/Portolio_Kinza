@@ -195,7 +195,6 @@ export const portfolioData = {
       link: "https://net-lab-pro.vercel.app/",
       image: netlabproImg
     }
-    }
   ],
   
   achievements: [
