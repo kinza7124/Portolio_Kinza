@@ -1,94 +1,152 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { ChessBoard, PieceSection } from "@/components/chess/ChessBoard";
 import { ContentSheet } from "@/components/panels/ContentSheet";
 import { portfolioData } from "@/data/portfolioData";
+
+const floatingPieces = [
+  { symbol: "♔", x: "5%", y: "12%", size: "text-3xl", delay: 0, duration: 7 },
+  { symbol: "♕", x: "88%", y: "8%", size: "text-2xl", delay: 1.2, duration: 8 },
+  { symbol: "♗", x: "15%", y: "75%", size: "text-2xl", delay: 2.4, duration: 6.5 },
+  { symbol: "♘", x: "82%", y: "65%", size: "text-xl", delay: 0.8, duration: 7.5 },
+  { symbol: "♖", x: "92%", y: "85%", size: "text-2xl", delay: 3, duration: 6 },
+  { symbol: "♙", x: "8%", y: "45%", size: "text-xl", delay: 1.8, duration: 8.5 },
+  { symbol: "♚", x: "75%", y: "35%", size: "text-lg", delay: 2, duration: 9 },
+  { symbol: "♛", x: "30%", y: "88%", size: "text-lg", delay: 3.5, duration: 7 },
+];
+
+const legendItems = [
+  { icon: "♔", label: "About" },
+  { icon: "♕", label: "Projects" },
+  { icon: "♗", label: "Skills / Education" },
+  { icon: "♘", label: "Experience / Leadership" },
+  { icon: "♖", label: "Achievements" },
+  { icon: "♙", label: "Contact" },
+];
 
 const Index = () => {
   const [selectedSection, setSelectedSection] = useState<PieceSection>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true);
+    const t = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(t);
   }, []);
 
-  const handlePieceSelect = (section: PieceSection) => {
-    setSelectedSection(section);
-  };
-
-  const handleClosePanel = () => {
-    setSelectedSection(null);
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20 relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 opacity-30" style={{ 
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M20 20c0 0 0-8 0-8s8 0 8 0 0 8 0 8-8 0-8 0Z'/%3E%3C/g%3E%3C/svg%3E")` 
-      }} />
+    <div className="min-h-screen relative overflow-hidden" style={{
+      background: "radial-gradient(ellipse at 50% 0%, hsl(220 18% 12%) 0%, hsl(220 18% 6%) 50%, hsl(220 20% 4%) 100%)"
+    }}>
+      {/* Ambient radial glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-30 pointer-events-none"
+        style={{ background: "var(--gradient-radial-gold)" }}
+      />
       
       {/* Floating chess pieces */}
-      <div className="absolute top-20 left-10 text-4xl text-primary/20 animate-float" style={{ animationDelay: '0s', animationDuration: '6s' }}>♔</div>
-      <div className="absolute top-40 right-20 text-3xl text-primary/15 animate-float" style={{ animationDelay: '1s', animationDuration: '7s' }}>♕</div>
-      <div className="absolute bottom-40 left-20 text-3xl text-primary/15 animate-float" style={{ animationDelay: '2s', animationDuration: '8s' }}>♗</div>
-      <div className="absolute top-60 right-40 text-2xl text-primary/10 animate-float" style={{ animationDelay: '3s', animationDuration: '6.5s' }}>♘</div>
-      <div className="absolute bottom-60 right-10 text-3xl text-primary/15 animate-float" style={{ animationDelay: '1.5s', animationDuration: '7.5s' }}>♖</div>
-      <div className="absolute top-96 left-1/4 text-2xl text-primary/10 animate-float" style={{ animationDelay: '2.5s', animationDuration: '6s' }}>♙</div>
-      
-      {/* Particle dots */}
-      <div className="absolute top-20 left-10 w-2 h-2 bg-primary/30 rounded-full blur-sm animate-float" style={{ animationDelay: '0s' }} />
-      <div className="absolute top-40 right-20 w-1 h-1 bg-primary/20 rounded-full blur-sm animate-float" style={{ animationDelay: '1s' }} />
-      <div className="absolute bottom-40 left-20 w-1.5 h-1.5 bg-primary/25 rounded-full blur-sm animate-float" style={{ animationDelay: '2s' }} />
-      <div className="absolute bottom-20 right-1/3 w-1 h-1 bg-primary/20 rounded-full blur-sm animate-float" style={{ animationDelay: '3s' }} />
-      <div className="absolute top-1/3 left-1/3 w-1.5 h-1.5 bg-primary/15 rounded-full blur-sm animate-float" style={{ animationDelay: '4s' }} />
-      
-      <div className="container mx-auto px-4 py-8 lg:py-12 relative z-10">
+      {floatingPieces.map((p, i) => (
+        <motion.div
+          key={i}
+          className={`absolute ${p.size} text-primary/10 pointer-events-none select-none`}
+          style={{ left: p.x, top: p.y }}
+          animate={{
+            y: [0, -12, 4, -8, 0],
+            rotate: [0, 3, -2, 1, 0],
+            opacity: [0.08, 0.15, 0.08],
+          }}
+          transition={{
+            duration: p.duration,
+            delay: p.delay,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          {p.symbol}
+        </motion.div>
+      ))}
+
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
+        backgroundImage: `linear-gradient(hsl(var(--primary) / 0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary) / 0.3) 1px, transparent 1px)`,
+        backgroundSize: '60px 60px',
+      }} />
+
+      <div className="container mx-auto px-4 py-8 lg:py-16 relative z-10">
         <div className="max-w-6xl mx-auto">
           
           {/* Header */}
-          <div className={`text-center mb-8 lg:mb-12 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif gold-text mb-4">
+          <motion.div
+            className="text-center mb-10 lg:mb-14"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <motion.div
+              className="inline-block mb-4"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={isLoaded ? { scale: 1, opacity: 1 } : {}}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <span className="text-xs tracking-[0.3em] uppercase text-primary/70 font-medium">
+                ♔ Portfolio ♔
+              </span>
+            </motion.div>
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif gold-text mb-3 tracking-tight">
               {portfolioData.about.name}
             </h1>
-            <p className="text-lg md:text-xl text-primary font-medium mb-2">
+            
+            <motion.div
+              className="divider-gold max-w-[200px] mx-auto mb-4"
+              initial={{ scaleX: 0 }}
+              animate={isLoaded ? { scaleX: 1 } : {}}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            />
+            
+            <p className="text-lg md:text-xl text-primary/80 font-serif tracking-wide mb-3">
               {portfolioData.about.title}
             </p>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Welcome to my portfolio. Click on any chess piece to explore my journey.
+            <p className="text-sm text-muted-foreground max-w-md mx-auto leading-relaxed">
+              Click on any chess piece to explore different facets of my journey
             </p>
-          </div>
+          </motion.div>
 
           {/* Chess Board */}
-          <div className={`flex justify-center mb-8 transition-all duration-1200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '300ms' }}>
-            <div className="w-full max-w-md sm:max-w-lg md:max-w-xl">
+          <motion.div
+            className="flex justify-center mb-10"
+            initial={{ opacity: 0, y: 40, scale: 0.95 }}
+            animate={isLoaded ? { opacity: 1, y: 0, scale: 1 } : {}}
+            transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <div className="w-full max-w-md sm:max-w-lg md:max-w-xl animate-glow-pulse rounded-lg">
               <ChessBoard
-                onPieceSelect={handlePieceSelect}
+                onPieceSelect={setSelectedSection}
                 selectedSection={selectedSection}
               />
             </div>
-          </div>
+          </motion.div>
 
-          {/* Instructions */}
-          <div className={`text-center transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '600ms' }}>
-            <div className="inline-flex flex-wrap justify-center items-center gap-2 px-4 py-2 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/30">
-              <span className="text-xl">♔</span>
-              <span className="text-xs text-muted-foreground">About</span>
-              <span className="text-muted-foreground/50">•</span>
-              <span className="text-xl">♕</span>
-              <span className="text-xs text-muted-foreground">Projects</span>
-              <span className="text-muted-foreground/50">•</span>
-              <span className="text-xl">♗</span>
-              <span className="text-xs text-muted-foreground">Skills/Education</span>
-              <span className="text-muted-foreground/50">•</span>
-              <span className="text-xl">♘</span>
-              <span className="text-xs text-muted-foreground">Experience/Leadership</span>
-              <span className="text-muted-foreground/50">•</span>
-              <span className="text-xl">♖</span>
-              <span className="text-xs text-muted-foreground">Achievements</span>
-              <span className="text-muted-foreground/50">•</span>
-              <span className="text-xl">♙</span>
-              <span className="text-xs text-muted-foreground">Contact</span>
+          {/* Legend */}
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.7 }}
+          >
+            <div className="inline-flex flex-wrap justify-center items-center gap-x-4 gap-y-2 px-6 py-3 bg-card/40 backdrop-blur-md rounded-2xl border border-border/20">
+              {legendItems.map((item, i) => (
+                <motion.div
+                  key={item.label}
+                  className="flex items-center gap-1.5"
+                  initial={{ opacity: 0 }}
+                  animate={isLoaded ? { opacity: 1 } : {}}
+                  transition={{ delay: 0.8 + i * 0.08 }}
+                >
+                  <span className="text-lg">{item.icon}</span>
+                  <span className="text-[11px] text-muted-foreground/80">{item.label}</span>
+                </motion.div>
+              ))}
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>
@@ -96,7 +154,7 @@ const Index = () => {
       {/* Content Sheet */}
       <ContentSheet 
         section={selectedSection} 
-        onClose={handleClosePanel} 
+        onClose={() => setSelectedSection(null)} 
       />
     </div>
   );
