@@ -1,12 +1,16 @@
+import { useEffect, useRef } from "react";
 import { Sheet, SheetContent, SheetHeader } from "@/components/ui/sheet";
 import { PieceSection } from "../chess/ChessBoard";
 import { AboutPanel } from "./AboutPanel";
 import { ProjectsPanel } from "./ProjectsPanel";
 import { SkillsPanel } from "./SkillsPanel";
 import { ExperiencePanel } from "./ExperiencePanel";
+import { EducationPanel } from "./EducationPanel";
+import { LeadershipPanel } from "./LeadershipPanel";
 import { AchievementsPanel } from "./AchievementsPanel";
 import { ContactPanel } from "./ContactPanel";
 import { X } from "lucide-react";
+import { sounds } from "@/lib/sounds";
 
 interface ContentSheetProps {
   section: PieceSection;
