@@ -6,7 +6,7 @@ export const ExperiencePanel = () => {
   const { experience } = portfolioData;
   
   return (
-    <div className="space-y-6 animate-fade-in">
+    <div className="space-y-6 animate-panel-content">
       <div className="flex items-center gap-2">
         <span className="text-4xl">♘</span>
         <h2 className="text-3xl font-serif gold-text">Experience</h2>
