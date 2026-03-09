@@ -35,4 +35,8 @@ export const AboutPanel = () => {
           <Mail className="w-4 h-4 text-primary" />
           <span>{about.email}</span>
         </div>
+        </div>
       </div>
+    </div>
+  );
+};
