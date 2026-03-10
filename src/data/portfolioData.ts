@@ -6,6 +6,7 @@ import algoVisualizerImg from "@/assets/projects/algo-visualizer.png";
 import bookRecommenderImg from "@/assets/projects/book-recommender.png";
 import lmsStudioImg from "@/assets/projects/lms-studio.png";
 import netlabproImg from "@/assets/projects/netlabpro.png";
+import inviteFlowImg from "@/assets/projects/1000116906.jpg";
 
 export const portfolioData = {
   about: {
@@ -139,6 +140,13 @@ export const portfolioData = {
   },
   
   projects: [
+    {
+      title: "Invite Flow # Digital Invite Genie",
+      description: "Event invitation platform for creating digital invite cards, managing guests, and sharing RSVP/QR-based entry flows. Built with React + Vite, Tailwind + shadcn/ui, and Supabase Auth + Postgres for secure sign-in and reliable event data.",
+      tech: ["React", "TypeScript", "Supabase"],
+      link: "https://digital-invite-genie.vercel.app/",
+      image: inviteFlowImg
+    },
     {
       title: "Worklog App | ACM TechOps",
       description: "Hierarchical worklog platform with role-based access, a 5-state progress flow, credits management, and file attachments. Architected the backend with PostgreSQL & Prisma.",
