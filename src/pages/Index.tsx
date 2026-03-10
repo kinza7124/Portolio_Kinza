@@ -24,6 +24,19 @@ const floatingPieces = [
   { symbol: "♟", x: "85%", y: "30%", size: "text-lg", delay: 3, duration: 12, range: 14 },
   { symbol: "♙", x: "40%", y: "38%", size: "text-lg", delay: 2.2, duration: 10, range: 10 },
   { symbol: "♟", x: "72%", y: "72%", size: "text-lg", delay: 1.4, duration: 13, range: 16 },
+  // Extra pieces to make the background presence stronger
+  { symbol: "♕", x: "14%", y: "84%", size: "text-2xl", delay: 2.6, duration: 15, range: 18 },
+  { symbol: "♘", x: "50%", y: "14%", size: "text-2xl", delay: 3.4, duration: 12, range: 15 },
+  { symbol: "♝", x: "88%", y: "58%", size: "text-xl", delay: 1.1, duration: 11, range: 14 },
+  { symbol: "♟", x: "30%", y: "86%", size: "text-xl", delay: 4.4, duration: 14, range: 13 },
+  { symbol: "♔", x: "62%", y: "32%", size: "text-3xl", delay: 0.9, duration: 16, range: 20 },
+];
+
+const heroBackgroundPieces = [
+  { symbol: "♔", x: "-2%", y: "4%", delay: 0, duration: 28 },
+  { symbol: "♛", x: "72%", y: "-4%", delay: 1.6, duration: 30 },
+  { symbol: "♞", x: "78%", y: "62%", delay: 2.4, duration: 26 },
+  { symbol: "♝", x: "10%", y: "66%", delay: 1, duration: 32 },
 ];
 
 const legendItems = [
@@ -46,37 +59,91 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden" style={{
-      background: "radial-gradient(ellipse at 50% 0%, hsl(220 18% 12%) 0%, hsl(220 18% 6%) 50%, hsl(220 20% 4%) 100%)"
+      background: "radial-gradient(ellipse at 50% 0%, hsl(220 18% 14%) 0%, hsl(220 18% 7%) 46%, hsl(220 20% 4%) 100%)"
     }}>
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: "radial-gradient(circle at 50% 45%, transparent 38%, hsla(220, 20%, 4%, 0.42) 100%)",
+        }}
+      />
+
+      <motion.div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: "radial-gradient(circle, hsla(42, 85%, 58%, 0.07) 0.8px, transparent 0.8px)",
+          backgroundSize: "32px 32px",
+          mixBlendMode: "screen",
+        }}
+        animate={{ opacity: [0.22, 0.38, 0.24] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      {heroBackgroundPieces.map((p, i) => (
+        <motion.div
+          key={`${p.symbol}-hero-${i}`}
+          className="absolute pointer-events-none select-none text-primary/[0.2] text-[clamp(8rem,18vw,16rem)] font-serif leading-none blur-[0.3px]"
+          style={{
+            left: p.x,
+            top: p.y,
+            textShadow: "0 0 36px hsla(42,85%,58%,0.35)",
+          }}
+          animate={{
+            y: [0, -22, 8, -16, 0],
+            x: [0, i % 2 === 0 ? 22 : -18, i % 2 === 0 ? -10 : 12, 0],
+            rotate: [0, i % 2 === 0 ? 4 : -4, i % 2 === 0 ? -3 : 3, 0],
+            opacity: [0.14, 0.3, 0.18, 0.26, 0.14],
+          }}
+          transition={{
+            duration: p.duration,
+            delay: p.delay,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          {p.symbol}
+        </motion.div>
+      ))}
+
       {/* Animated ambient orbs */}
       <motion.div
-        className="absolute w-[600px] h-[600px] rounded-full pointer-events-none opacity-20"
-        style={{ background: "radial-gradient(circle, hsla(42, 85%, 53%, 0.15), transparent 70%)", top: "10%", left: "20%" }}
+        className="absolute w-[600px] h-[600px] rounded-full pointer-events-none opacity-30"
+        style={{ background: "radial-gradient(circle, hsla(42, 85%, 53%, 0.22), transparent 70%)", top: "10%", left: "20%" }}
         animate={{ x: [0, 80, -40, 60, 0], y: [0, -60, 30, -80, 0], scale: [1, 1.2, 0.9, 1.1, 1] }}
         transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute w-[500px] h-[500px] rounded-full pointer-events-none opacity-15"
-        style={{ background: "radial-gradient(circle, hsla(220, 60%, 40%, 0.12), transparent 70%)", bottom: "5%", right: "10%" }}
+        className="absolute w-[500px] h-[500px] rounded-full pointer-events-none opacity-25"
+        style={{ background: "radial-gradient(circle, hsla(220, 60%, 40%, 0.2), transparent 70%)", bottom: "5%", right: "10%" }}
         animate={{ x: [0, -60, 40, -30, 0], y: [0, 40, -50, 20, 0], scale: [1, 0.85, 1.15, 0.95, 1] }}
         transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute w-[400px] h-[400px] rounded-full pointer-events-none opacity-10"
-        style={{ background: "radial-gradient(circle, hsla(42, 70%, 58%, 0.1), transparent 70%)", top: "50%", right: "30%" }}
+        className="absolute w-[400px] h-[400px] rounded-full pointer-events-none opacity-20"
+        style={{ background: "radial-gradient(circle, hsla(42, 70%, 58%, 0.16), transparent 70%)", top: "50%", right: "30%" }}
         animate={{ x: [0, 50, -70, 30, 0], y: [0, -40, 60, -20, 0] }}
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* Floating particles — reduced for performance */}
-      {Array.from({ length: 10 }).map((_, i) => (
+      <motion.div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: "linear-gradient(125deg, hsla(42, 85%, 58%, 0.12) 0%, transparent 28%, transparent 72%, hsla(42, 85%, 58%, 0.1) 100%)",
+          mixBlendMode: "screen",
+        }}
+        animate={{ opacity: [0.45, 0.75, 0.5] }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      {/* Floating particles */}
+      {Array.from({ length: 18 }).map((_, i) => (
         <motion.div
           key={`particle-${i}`}
-          className="absolute w-1 h-1 rounded-full bg-primary/15 pointer-events-none"
+          className="absolute w-1 h-1 rounded-full bg-primary/30 pointer-events-none"
           style={{ left: `${5 + (i * 9.3) % 90}%`, top: `${8 + (i * 9.7) % 84}%` }}
           animate={{
-            y: [0, -25, 8, -15, 0],
-            opacity: [0.08, 0.3, 0.1, 0.25, 0.08],
+            y: [0, -32, 10, -18, 0],
+            opacity: [0.16, 0.45, 0.2, 0.34, 0.16],
           }}
           transition={{
             duration: 10 + (i % 4) * 3,
@@ -91,13 +158,21 @@ const Index = () => {
       {floatingPieces.map((p, i) => (
         <motion.div
           key={i}
-          className={`absolute ${p.size} text-primary/[0.12] pointer-events-none select-none`}
+          className={`absolute ${p.size} text-primary/[0.3] pointer-events-none select-none`}
           style={{ left: p.x, top: p.y }}
           animate={{
             y: [0, -p.range, p.range * 0.4, -p.range * 0.6, 0],
             x: [0, p.range * 0.5 * (i % 2 === 0 ? 1 : -1), -p.range * 0.3 * (i % 2 === 0 ? 1 : -1), 0],
             rotate: [0, 8, -5, 3, 0],
-            opacity: [0.08, 0.22, 0.1, 0.18, 0.08],
+            opacity: [0.28, 0.55, 0.32, 0.48, 0.28],
+            scale: [1, 1.08, 0.98, 1.04, 1],
+            filter: [
+              "drop-shadow(0 0 0px hsla(42,85%,58%,0))",
+              "drop-shadow(0 0 14px hsla(42,85%,58%,0.4))",
+              "drop-shadow(0 0 6px hsla(42,85%,58%,0.22))",
+              "drop-shadow(0 0 12px hsla(42,85%,58%,0.34))",
+              "drop-shadow(0 0 0px hsla(42,85%,58%,0))"
+            ],
           }}
           transition={{
             duration: p.duration,
@@ -114,14 +189,14 @@ const Index = () => {
       <motion.div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: `linear-gradient(hsl(var(--primary) / 0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary) / 0.3) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px',
+          backgroundImage: `linear-gradient(hsl(var(--primary) / 0.45) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary) / 0.45) 1px, transparent 1px)`,
+          backgroundSize: '52px 52px',
         }}
-        animate={{ opacity: [0.02, 0.05, 0.02] }}
+        animate={{ opacity: [0.12, 0.2, 0.12] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      <div className="container mx-auto px-4 py-8 lg:py-16 relative z-10">
+      <div className="container mx-auto px-4 py-8 lg:py-16 relative z-20">
         <div className="max-w-6xl mx-auto">
           
           {/* Header */}
