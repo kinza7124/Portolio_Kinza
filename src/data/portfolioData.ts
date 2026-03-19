@@ -44,6 +44,14 @@ export const portfolioData = {
   
   experience: [
     {
+      role: "Research Programmer",
+      company: "Department of Computer Science, FAST-NUCES Karachi Campus",
+      period: "2026 - Present",
+      description: "Contributing as a Research Programmer under the Faculty Research Support Grant (FRSG) for the project 'Adaptive Trust Framework for Multi-Stakeholder Collaboration in Synchro Modal Transport Systems.' Working across Blockchain, Machine Learning, Data Analytics, Security, Privacy, Distributed Systems, and Web & Mobile Development.",
+      tags: ["Blockchain", "Machine Learning", "Data Analytics", "Security", "Privacy", "Distributed Systems", "Web & Mobile Development"],
+      link: ""
+    },
+    {
       role: "App Testing Program Participant",
       company: "9D Technologies",
       period: "2026",
