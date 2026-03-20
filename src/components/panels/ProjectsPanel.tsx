@@ -80,28 +80,15 @@ export const ProjectsPanel = () => {
                     <ExternalLink className="h-3 w-3" />
                   </a>
                 ) : null}
-
-                {project.directLink ? (
-                  <a
-                    href={project.directLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 rounded-md border border-border/50 bg-background/40 px-2 py-1 text-[10px] font-medium text-foreground/90 transition-colors hover:bg-background/70"
-                  >
-                    Direct Link
-                    <ExternalLink className="h-3 w-3" />
-                  </a>
-                ) : (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 rounded-md border border-border/50 bg-background/40 px-2 py-1 text-[10px] font-medium text-foreground/90 transition-colors hover:bg-background/70"
-                  >
-                    View Project
-                    <ExternalLink className="h-3 w-3" />
-                  </a>
-                )}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 rounded-md border border-border/50 bg-background/40 px-2 py-1 text-[10px] font-medium text-foreground/90 transition-colors hover:bg-background/70"
+                >
+                  View Project
+                  <ExternalLink className="h-3 w-3" />
+                </a>
               </div>
             </div>
           </motion.div>
