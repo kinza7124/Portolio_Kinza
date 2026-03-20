@@ -159,7 +159,9 @@ export const portfolioData = {
       title: "Worklog App | ACM TechOps",
       description: "Hierarchical worklog platform with role-based access, a 5-state progress flow, credits management, and file attachments. Architected the backend with PostgreSQL & Prisma.",
       tech: ["PostgreSQL", "Prisma", "Backend"],
-      link: "https://drive.google.com/file/d/1l9_X4fIEuGKjuc3v6A3IZWFY8PsyEPOR/view",
+      link: "https://worklog.acmnuceskhi.com/",
+      demoLink: "https://drive.google.com/file/d/1l9_X4fIEuGKjuc3v6A3IZWFY8PsyEPOR/view",
+      directLink: "https://worklog.acmnuceskhi.com/",
       image: worklogImg
     },
     {

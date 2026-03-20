@@ -18,11 +18,8 @@ export const ProjectsPanel = () => {
       
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[65vh] overflow-y-auto pr-1">
         {projects.map((project, index) => (
-          <motion.a
+          <motion.div
             key={index}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
             className="group block rounded-xl border border-border/30 overflow-hidden bg-secondary/30 hover:border-primary/40 transition-all duration-500 card-hover"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -39,7 +36,15 @@ export const ProjectsPanel = () => {
               <div className="absolute inset-0" style={{
                 background: "linear-gradient(180deg, transparent 30%, hsl(220 18% 6% / 0.95) 100%)"
               }} />
-              <ExternalLink className="absolute top-2 right-2 w-3.5 h-3.5 text-foreground/60 opacity-0 group-hover:opacity-100 transition-all duration-300 drop-shadow-lg" />
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute top-2 right-2 rounded-md bg-background/65 p-1 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-background/90"
+                aria-label={`Open ${project.title}`}
+              >
+                <ExternalLink className="w-3.5 h-3.5 text-foreground/80 drop-shadow-lg" />
+              </a>
             </div>
             
             <div className="p-3">
@@ -62,8 +67,44 @@ export const ProjectsPanel = () => {
                   </Badge>
                 ))}
               </div>
+
+              <div className="mt-3 flex flex-wrap gap-2">
+                {project.demoLink ? (
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 rounded-md border border-primary/25 bg-primary/10 px-2 py-1 text-[10px] font-medium text-primary transition-colors hover:bg-primary/20"
+                  >
+                    View Demo
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                ) : null}
+
+                {project.directLink ? (
+                  <a
+                    href={project.directLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 rounded-md border border-border/50 bg-background/40 px-2 py-1 text-[10px] font-medium text-foreground/90 transition-colors hover:bg-background/70"
+                  >
+                    Direct Link
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                ) : (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 rounded-md border border-border/50 bg-background/40 px-2 py-1 text-[10px] font-medium text-foreground/90 transition-colors hover:bg-background/70"
+                  >
+                    View Project
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                )}
+              </div>
             </div>
-          </motion.a>
+          </motion.div>
         ))}
       </div>
     </div>
