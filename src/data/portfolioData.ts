@@ -198,6 +198,7 @@ export const portfolioData = {
       tech: ["Machine Learning", "Python", "Recommender Systems"],
       link: "https://github.com/kinza7124/Book-Recommender-System",
       demoLink: "https://drive.google.com/file/d/16L7K6RIYG9Yp2fgapZZuv4TSaYxzCpQA/view?usp=drive_link",
+      directLink: "https://drive.google.com/file/d/16L7K6RIYG9Yp2fgapZZuv4TSaYxzCpQA/view?usp=drive_link",
       image: bookRecommenderImg
     },
     {
@@ -206,6 +207,7 @@ export const portfolioData = {
       tech: ["Next.js", "TypeScript", "PostgreSQL"],
       link: "https://lnkd.in/d3d_diT8",
       demoLink: "https://drive.google.com/file/d/1GtAkYoExTM5rLw-Fvh2ZPES26GWlWFQm/view?usp=drive_link",
+      directLink: "https://drive.google.com/file/d/1GtAkYoExTM5rLw-Fvh2ZPES26GWlWFQm/view?usp=drive_link",
       image: lmsStudioImg
     },
     {
