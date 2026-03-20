@@ -160,7 +160,7 @@ export const portfolioData = {
       description: "Hierarchical worklog platform with role-based access, a 5-state progress flow, credits management, and file attachments. Architected the backend with PostgreSQL & Prisma.",
       tech: ["PostgreSQL", "Prisma", "Backend"],
       link: "https://worklog.acmnuceskhi.com/",
-      demoLink: "https://drive.google.com/file/d/1l9_X4fIEuGKjuc3v6A3IZWFY8PsyEPOR/view",
+      demoLink: "https://drive.google.com/file/d/1l9_X4fIEuGKjuc3v6A3IZWFY8PsyEPOR/view?usp=drive_link",
       directLink: "https://worklog.acmnuceskhi.com/",
       image: worklogImg
     },
@@ -197,6 +197,7 @@ export const portfolioData = {
       description: "Smart recommendation engine combining Popularity-Based and Collaborative Filtering to surface personalized book suggestions from large datasets.",
       tech: ["Machine Learning", "Python", "Recommender Systems"],
       link: "https://github.com/kinza7124/Book-Recommender-System",
+      demoLink: "https://drive.google.com/file/d/16L7K6RIYG9Yp2fgapZZuv4TSaYxzCpQA/view?usp=drive_link",
       image: bookRecommenderImg
     },
     {
@@ -204,6 +205,7 @@ export const portfolioData = {
       description: "Full-featured LMS with role-based access, course management, assignment workflows, and Google Classroom–style collaboration tools.",
       tech: ["Next.js", "TypeScript", "PostgreSQL"],
       link: "https://lnkd.in/d3d_diT8",
+      demoLink: "https://drive.google.com/file/d/1GtAkYoExTM5rLw-Fvh2ZPES26GWlWFQm/view?usp=drive_link",
       image: lmsStudioImg
     },
     {
