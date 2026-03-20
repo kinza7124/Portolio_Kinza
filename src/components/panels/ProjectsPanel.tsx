@@ -68,7 +68,7 @@ export const ProjectsPanel = () => {
                 ))}
               </div>
 
-              <div className="mt-3 flex flex-wrap gap-2">
+              <div className="relative z-10 mt-3 flex flex-wrap gap-2">
                 {project.demoLink ? (
                   <a
                     href={project.demoLink}
