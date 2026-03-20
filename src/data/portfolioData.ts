@@ -205,7 +205,7 @@ export const portfolioData = {
       title: "LMS Studio",
       description: "Full-featured LMS with role-based access, course management, assignment workflows, and Google Classroom–style collaboration tools.",
       tech: ["Next.js", "TypeScript", "PostgreSQL"],
-      link: "https://lnkd.in/d3d_diT8",
+      link: "https://lms-studio-kappa.vercel.app/",
       demoLink: "https://drive.google.com/file/d/1GtAkYoExTM5rLw-Fvh2ZPES26GWlWFQm/view?usp=drive_link",
       directLink: "https://drive.google.com/file/d/1GtAkYoExTM5rLw-Fvh2ZPES26GWlWFQm/view?usp=drive_link",
       image: lmsStudioImg
