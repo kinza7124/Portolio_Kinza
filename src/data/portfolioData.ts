@@ -196,7 +196,7 @@ export const portfolioData = {
       title: "Book Recommender System",
       description: "Smart recommendation engine combining Popularity-Based and Collaborative Filtering to surface personalized book suggestions from large datasets.",
       tech: ["Machine Learning", "Python", "Recommender Systems"],
-      link: "https://github.com/kinza7124/Book-Recommender-System",
+      link: "https://bookrs-864dcc59d8fa.herokuapp.com/",
       demoLink: "https://drive.google.com/file/d/16L7K6RIYG9Yp2fgapZZuv4TSaYxzCpQA/view?usp=drive_link",
       directLink: "https://drive.google.com/file/d/16L7K6RIYG9Yp2fgapZZuv4TSaYxzCpQA/view?usp=drive_link",
       image: bookRecommenderImg
