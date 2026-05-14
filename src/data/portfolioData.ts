@@ -153,7 +153,7 @@ export const portfolioData = {
     {
       title: "Flood Detection & Depth-Aware Risk Assessment",
       description: "End-to-end deep learning pipeline for flood detection using Attention UNet, featuring Grad-CAM explainability and ZoeDepth for real-time monocular depth estimation and risk scoring from satellite imagery.",
-      tech: ["Attention UNet", "ZoeDepth", "Computer Vision", "Python", "Hugging Face"],
+      tech: ["Attention UNet", "ZoeDepth", "Deep Learning", "Python", "Hugging Face"],
       link: "https://huggingface.co/spaces/Kinzaaa/flood-risk-detection",
       image: floodImg
     },
