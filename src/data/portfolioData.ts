@@ -7,6 +7,8 @@ import bookRecommenderImg from "@/assets/projects/book-recommender.png";
 import lmsStudioImg from "@/assets/projects/lms-studio.png";
 import netlabproImg from "@/assets/projects/netlabpro.png";
 import inviteFlowImg from "@/assets/projects/1000116906.jpg";
+import mediqueryImg from "@/assets/projects/mediquery.png";
+import floodImg from "@/assets/projects/flood-img.png";
 
 export const portfolioData = {
   about: {
@@ -148,6 +150,21 @@ export const portfolioData = {
   },
   
   projects: [
+    {
+      title: "Flood Detection & Depth-Aware Risk Assessment",
+      description: "End-to-end deep learning pipeline for flood detection using Attention UNet, featuring Grad-CAM explainability and ZoeDepth for real-time monocular depth estimation and risk scoring from satellite imagery.",
+      tech: ["Attention UNet", "ZoeDepth", "Computer Vision", "Python", "Hugging Face"],
+      link: "https://huggingface.co/spaces/Kinzaaa/flood-risk-detection",
+      image: floodImg
+    },
+    {
+      title: "MediQuery",
+      description: "AI-powered medical chatbot and clinical assistant using a production-grade RAG pipeline. Achieved 92% answer relevancy with hybrid retrieval and source-grounded clinical insights.",
+      tech: ["RAG Pipeline", "Python", "LangChain", "Pinecone", "Groq", "Docker"],
+      link: "https://medi-query-jet.vercel.app/",
+      demoLink: "https://github.com/kinza7124/Medi-Query",
+      image: mediqueryImg
+    },
     {
       title: "Invite Flow # Digital Invite Genie",
       description: "Event invitation platform for creating digital invite cards, managing guests, and sharing RSVP/QR-based entry flows. Built with React + Vite, Tailwind + shadcn/ui, and Supabase Auth + Postgres for secure sign-in and reliable event data.",

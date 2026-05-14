@@ -76,7 +76,7 @@ export const ProjectsPanel = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 rounded-md border border-primary/25 bg-primary/10 px-2 py-1 text-[10px] font-medium text-primary transition-colors hover:bg-primary/20"
                   >
-                    View Demo
+                    {project.demoLink.includes("github.com") ? "View Code" : "View Demo"}
                     <ExternalLink className="h-3 w-3" />
                   </a>
                 ) : null}
